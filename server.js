@@ -10,8 +10,9 @@ mongoose.connect(db,{useNewUrlParser: true, useUnifiedTopology: true} ,(err) => 
     if (err) throw err
     console.log('Database connected!...')
 })
-
+app.use('/api/user', require('./routes/user'))
 app.use('/api/auth', require('./routes/auth'))
+app.use('/api/reserv', require('./routes/reserv'))
 
 
 
