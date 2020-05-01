@@ -10,7 +10,7 @@ const ReservationSchema = mongoose.Schema({
         required: true
     },
     Date: {
-        type: Number,
+        type: String,
         required: true
     },
     Number: {
@@ -18,11 +18,11 @@ const ReservationSchema = mongoose.Schema({
         required: true
     },
     Placement: {
-        type: Number,
+        type: String,
         required: true
     },
     Hour: {
-        type: Number,
+        type: String,
         required: true
     },
     date: {
