@@ -1,0 +1,18 @@
+.navbar {
+  background-color: rgb(37, 37, 37);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px;
+}
+
+input {
+  border-radius: 3px;
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 3px;
+  font-size: 15px;
+  outline: none;
+}
