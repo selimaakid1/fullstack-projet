@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const bcrypt = require('bcryptjs')
 const { check, validationResult } = require('express-validator');
-const User = require('../model/User')
+const User = require('../models/User')
 const jwt = require('jsonwebtoken')
 const jwtsecret = "secret"
 router.post('/', [

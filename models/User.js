@@ -28,6 +28,10 @@ const UserSchema = mongoose.Schema({
     Date : {
         type: Date,
         default: Date.now
+    },
+    Adress : {
+        type: String,
+        required : true
     }
 })
 
