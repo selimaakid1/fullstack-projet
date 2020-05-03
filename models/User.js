@@ -21,7 +21,11 @@ const UserSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    date : {
+    Adress : {
+        type: String,
+        required: true
+    },
+    Date : {
         type: Date,
         default: Date.now
     },
