@@ -38,10 +38,45 @@ router.post('/', [auth, [
         .then((reserv) => res.json(reserv))
         .catch(err => console.log(err.message))
 })
-router.delete('/:id', (req, res) => {
-    res.send('delete reservation')
+router.delete('/:id',auth, (req, res) => {
+    Reserv.findById(req.params.id)
+        .then(reserv => {
+            if (!reserv) {
+                return res.json({ msg: 'reserv not found' })
+            } else if (reserv.user.toString() !== req.user.id) {
+                res.json({ msg: "not authorized" })
+
+
+            } else {
+                Reserv.findByIdAndDelete(req.params.id, (err, data) => {
+                    res.json({ msg: "Reservation has been Deleted" })
+                })
+            }
+        })
+        .catch(err => console.log(err.message))
 })
-router.put('/:id', (req, res) => {
-    res.send('edit reservation')
+router.put('/:id', auth, (req, res) => {
+    const { Name, Date, Number, Placement, Hour } = req.body
+    let reservFields = {}
+    if (Name) reservFields.Name = Name
+    if (Date) reservFields.Date = Date
+    if (Number) reservFields.Number = Number
+    if (Placement) reservFields.Placement = Placement
+    if (Hour) reservFields.Hour = Hour
+    Reserv.findById(req.params.id)
+        .then(reserv => {
+            if (!reserv) {
+                return res.json({ msg: 'reserv not found' })
+            } else if (reserv.user.toString() !== req.user.id) {
+                res.json({ msg: "not authorized" })
+
+
+            } else {
+                Reserv.findByIdAndUpdate(req.params.id, { $set: reservFields }, (err, data) => {
+                    res.json({ msg: "Reservation has been updated" })
+                })
+            }
+        })
+        .catch(err => console.log(err.message))
 })
 module.exports = router
