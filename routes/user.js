@@ -21,7 +21,7 @@ router.post('/', [
     User.findOne({ Email })
         .then(user => {
             if (user) {
-                res.json({ msg: 'User already exists!!' })
+                res.status(400).json({ msg: 'User already exists!!' })
             } else {
                 user = new User({
                     FirstName,
@@ -44,7 +44,7 @@ router.post('/', [
                         }
                         jwt.sign(payload, jwtsecret, { expiresIn: 3600000 }, (err, token) => {
                             if (err) throw err
-                            res.send(token)
+                            res.send({token})
                         })
                     })
 
