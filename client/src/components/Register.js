@@ -22,12 +22,12 @@ class Register extends Component {
                 <h1>Register</h1>
                 <div className= 'container'>
                 <form>
-                    <input name= 'firstname' type='text' placeholder='Your first name' />
-                    <input name= 'lastname' type='text' placeholder='Your last name' />
-                    <input name= 'email' type='text' placeholder='Your email' />
-                    <input name= 'password' type='text' placeholder='Your password' />
-                    <input name= 'phone' type='text' placeholder='Your phone number' />
-                    <input name= 'adress' type='text' placeholder='Your Adress' />
+                    <input name= 'firstname' type='text'onChange={this.handleChange} placeholder='Your first name' />
+                    <input name= 'lastname' type='text'onChange={this.handleChange} placeholder='Your last name' />
+                    <input name= 'email' type='text'onChange={this.handleChange} placeholder='Your email' />
+                    <input name= 'password' type='text'onChange={this.handleChange} placeholder='Your password' />
+                    <input name= 'phone' type='text'onChange={this.handleChange} placeholder='Your phone number' />
+                    <input name= 'adress' type='text' onChange={this.handleChange}placeholder='Your Adress' />
                 </form>
                 </div>
                 <button className= 'btn btn-primary'>Register</button> 
