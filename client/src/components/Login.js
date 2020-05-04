@@ -15,6 +15,16 @@ class Login extends Component {
     render() {
         return (
             <div>
+
+                <h1>Login</h1>
+                <div className= 'container'>
+                <form>
+                    <input name= 'email' type='text' placeholder='Your email' />
+                    <input name= 'password' type='text' placeholder='Your password' />
+                </form>
+                </div>
+                <button className= 'btn btn-primary'>Login</button> 
+
                 <h1>Connecter vous</h1>
                 <div className= 'container'>
                 <form>
@@ -23,6 +33,7 @@ class Login extends Component {
                 </form>
                 </div>
                 <button className= 'btn btn-primary'>Connecter vous</button> 
+
                 
             </div>
         )
