@@ -5,12 +5,14 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from './components/Home';
 import Login from './components/Login'
 import Register from './components/Register'
+import Alerts from './components/Alerts'
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
       <div className="container">
+        <Alerts />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />

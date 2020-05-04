@@ -8,11 +8,18 @@
   padding: 10px;
 }
 
+.navbar a {
+  text-decoration: none;
+
+}
+
 input {
-  border-radius: 3px;
-  border: 1px solid gray;
-  padding: 10px;
-  margin: 3px;
   font-size: 15px;
   outline: none;
+  width: 30%;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 6px;
+    border:1px solid #ccc;
+    font-family: 'Roboto', sans-serif;
 }
