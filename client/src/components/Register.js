@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-
-
 import { connect } from 'react-redux'
 import { v4 as uuid } from "uuid";
 import { setAlert, removeAlert } from '../actions/AlertActions'
@@ -31,6 +29,7 @@ class Register extends Component {
             }, 5000)
         }
     }
+
     render() {
         return (
             <div>
