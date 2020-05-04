@@ -2,18 +2,19 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { v4 as uuid } from "uuid";
 import { setAlert, removeAlert } from '../actions/AlertActions'
+import { register } from '../actions/AuthActions'
 
 
 class Register extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            firstname: '',
-            lastname: '',
-            email: '',
-            password: '',
-            phone: '',
-            adress: ''
+            FirstName: '',
+            LastName: '',
+            Email: '',
+            PassWord: '',
+            PhoneNumber: '',
+            Adress: ''
         }
     }
 
@@ -21,13 +22,33 @@ class Register extends Component {
         this.setState({ [e.target.name]: e.target.value })
     }
     registerNow = () => {
-        if (this.state.firstname === '' || this.state.lastname === '', this.state.email === '', this.state.password === '') {
+
+        if (this.state.FirstName === '' || this.state.LastName === '', this.state.Email === '', this.state.PassWord === '') {
             let id = uuid()
             this.props.setAlert('All fields are required', 'warning', id)
             setTimeout(() => {
                 this.props.removeAlert()
             }, 5000)
+        } else {
+            this.props.register({
+                FirstName: this.state.FirstName,
+                LastName: this.state.LastName,
+                Email: this.state.Email,
+                PassWord: this.state.PassWord,
+                PhoneNumber: this.state.PhoneNumber,
+                Adress: this.state.Adress
+            })
         }
+    }
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.auth.error === 'User already exists!!') {
+            let id = uuid()
+            this.props.setAlert(nextProps.auth.error, 'warning', id)
+            setTimeout(() => {
+                this.props.removeAlert()
+            }, 5000)
+        }
+
     }
 
     render() {
@@ -36,15 +57,15 @@ class Register extends Component {
                 <h1>Register</h1>
                 <div className='container'>
                     <form>
-                        <input name='firstname' type='text' onChange={this.handleChange} placeholder='Your first name' />
-                        <input name='lastname' type='text' onChange={this.handleChange} placeholder='Your last name' />
-                        <input name='email' type='text' onChange={this.handleChange} placeholder='Your email' />
-                        <input name='password' type='text' onChange={this.handleChange} placeholder='Your password' />
-                        <input name='phone' type='text' onChange={this.handleChange} placeholder='Your phone number' />
-                        <input name='adress' type='text' onChange={this.handleChange} placeholder='Your Adress' />
+                        <input name='FirstName' type='text' onChange={this.handleChange} placeholder='Your first name' />
+                        <input name='LastName' type='text' onChange={this.handleChange} placeholder='Your last name' />
+                        <input name='Email' type='text' onChange={this.handleChange} placeholder='Your email' />
+                        <input name='PassWord' type='text' onChange={this.handleChange} placeholder='Your password' />
+                        <input name='PhoneNumber' type='text' onChange={this.handleChange} placeholder='Your phone number' />
+                        <input name='Adress' type='text' onChange={this.handleChange} placeholder='Your Adress' />
                     </form>
                 </div>
-                <button className='btn btn-primary'>Register</button>
+                <button onClick={this.registerNow} className='btn btn-primary'>Register</button>
             </div>
         )
     }
@@ -52,11 +73,16 @@ class Register extends Component {
 
 
 
-const mapDispatchToProps = dispatch => {
+// const mapDispatchToProps = dispatch => {
+//     return {
+//         setAlert: (msg, type, id) => dispatch(setAlert((msg, type, id))),
+//         removeAlert: id => dispatch(removeAlert(id))
+//     }
+// }
+const mapStateToProps = state => {
     return {
-        setAlert: (msg, type, id) => dispatch(setAlert((msg, type, id))),
-        removeAlert: id => dispatch(removeAlert(id))
+        auth: state.auth
     }
 }
-export default connect(null, mapDispatchToProps)(Register)
+export default connect(mapStateToProps, { setAlert, removeAlert, register })(Register)
 
