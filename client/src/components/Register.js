@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {v4 as uuid} from "uuid"; 
 import { setAlert, removeAlert } from '../actions/AlertActions'
+import { Link } from 'react-router-dom'
+
 
 class Register extends Component {
     constructor(props) {
@@ -31,7 +33,7 @@ class Register extends Component {
 
         return (
             <div>
-                <h1>Créer un compte gratuitement</h1>
+                <h1 className='signup'>Créer un compte gratuitement</h1>
                 <div className= 'container'>
                 <form>
                     <input name= 'firstname' type='text' placeholder='Prénom' />
@@ -42,8 +44,10 @@ class Register extends Component {
                     <input name= 'adress' type='text' placeholder='Adresse' />
                 </form>
                 </div>
-                <button onClick = {this.registerNow } className= 'btn btn-primary'>Inscrivez vous</button> 
-                
+                <div className='bottom'>
+                <button onClick = {this.registerNow } className= 'btn btn-primary' className='btn-signup'>Inscription</button> 
+                </div>
+                <h6 className='link-sign'>Vous avez un compte ?  <Link to='/login' >Connectez-vous</Link></h6>
             </div>
         )
     }

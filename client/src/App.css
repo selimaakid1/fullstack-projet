@@ -1,15 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
 .navbar {
-  background-color: rgb(37, 37, 37);
-  color: white;
+  background: linear-gradient(to right, rgba(184, 157, 104, 0.623), rgba(179, 147, 80, 0.541), rgba(163, 131, 62, 0.541), #FCF6BA);
+  color: rgb(255, 255, 255);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-decoration: none;
   padding: 10px;
-}
-
-.navbar a {
-  text-decoration: none;
+  border: 1px solid transparent;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  font-size: 17px;
 
 }
 
@@ -17,9 +20,70 @@ input {
   font-size: 15px;
   outline: none;
   width: 30%;
-    padding: 15px;
-    margin: 5px;
-    border-radius: 6px;
-    border:1px solid #ccc;
-    font-family: 'Roboto', sans-serif;
+  padding: 15px;
+  margin: 5px;
+  border-radius: 6px;
+  border:1px solid #ccc;
+  font-family: 'Roboto', sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  padding: 10 px;
+}
+
+.signup {
+  text-align: center;
+  padding: 20px;
+  font-size: 17px;
+  font-family: 'Jost', sans-serif;
+}
+.btn-signup {
+text-align: center;
+background-color:#ededed33;
+border-radius:6px;
+border:1px solid #ebebeb;
+display:inline-block;
+cursor:pointer;
+color:rgb(19, 20, 20);
+font-family: 'Jost', sans-serif;
+font-size:15px;
+padding:10px 20px;
+text-decoration:none;
+text-shadow:0px 1px 0px #ffffff;
+  left: 50%;
+  margin: 20px;
+  
+}
+
+
+a{ 
+  text-decoration: none;
+  color: rgb(54, 53, 53);
+
+}
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.signin {
+  text-align: center;
+  padding: 20px;
+  font-size: 17px;
+  font-family: 'Jost', sans-serif;
+}
+.bottom{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-sign {
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  padding: 20px;
 }
