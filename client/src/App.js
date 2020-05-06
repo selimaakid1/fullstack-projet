@@ -5,16 +5,23 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from './components/Home';
 import Login from './components/Login'
 import Register from './components/Register'
+
+
 import Alerts from './components/Alerts'
 import Contactus from './components/Contactus';
 import Menu from './components/Menu'
+
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <div >
+    
+      <div className="container">
+
+
         <Alerts />
+
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
