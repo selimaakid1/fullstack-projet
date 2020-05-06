@@ -1,19 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 
 .navbar {
-  background: linear-gradient(to right, rgba(184, 157, 104, 0.623), rgba(179, 147, 80, 0.541), rgba(163, 131, 62, 0.541), #FCF6BA);
-  color: rgb(255, 255, 255);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  color: rgb(8, 8, 8);
   text-decoration: none;
-  padding: 10px;
-
+  padding: 20px;
   border: 1px solid transparent;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  font-size: 17px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  background-color: white;
+
+}
+.navbar a {
+  color: rgb(12, 12, 12);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+
+
+}
+.navbar a:hover{
+  color: #ddddda;
+  font-family: "Karla", sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
 
 }
 
@@ -39,9 +50,11 @@ input {
 
   padding: 15px;
   margin: 5px;
+  width: 33%;
   border-radius: 6px;
   border:1px solid #ccc;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Karla", sans-serif;
+
 }
 
 form {
@@ -56,17 +69,17 @@ form {
   text-align: center;
   padding: 20px;
   font-size: 17px;
-  font-family: 'Jost', sans-serif;
+  font-family: "Karla", sans-serif;
 }
 .btn-signup {
 text-align: center;
-background-color:#ededed33;
-border-radius:6px;
+background-color:#ffffffd2;
+border-radius:25px;
 border:1px solid #ebebeb;
 display:inline-block;
 cursor:pointer;
-color:rgb(19, 20, 20);
-font-family: 'Jost', sans-serif;
+color:rgb(7, 7, 7);
+font-family: "Karla", sans-serif;
 font-size:15px;
 padding:10px 20px;
 text-decoration:none;
@@ -75,11 +88,17 @@ text-shadow:0px 1px 0px #ffffff;
   margin: 20px;
   
 }
+.btn-signup:hover {
+  background: rgb(236, 235, 235);
+  color: rgb(3, 3, 3);
+}
 
 
 a{ 
   text-decoration: none;
   color: rgb(54, 53, 53);
+  font-family: "Karla", sans-serif;
+
 
 }
 a:hover {
@@ -91,7 +110,8 @@ a:hover {
   text-align: center;
   padding: 20px;
   font-size: 17px;
-  font-family: 'Jost', sans-serif;
+  font-family: "Karla", sans-serif;
+
 }
 .bottom{
   display: flex;
@@ -101,14 +121,37 @@ a:hover {
 
 .link-sign {
   text-align: center;
-  font-family: 'Jost', sans-serif;
+  font-family: "Karla", sans-serif;
+
   padding: 20px;
-
-    padding: 15px;
-    margin: 5px;
-    border-radius: 6px;
-    border:1px solid #ccc;
-    font-family: 'Roboto', sans-serif;
+}
 
 
+select {
+  background-color: #f2f5f7;
+  color: rgb(3, 3, 3);
+  padding: 12px;
+  width: 250px;
+  border: 1px solid #cdcdcd;
+  font-size: 17px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+  font-family: "Karla", sans-serif;
+  display: inline-block;
+  height: 33px;
+}
+.home {
+  width: 80%;
+  margin: 0;
+}
+
+.carousel {
+  height: 100vh;
+  width: 100%;
+  overflow:hidden;
+}
+.carousel .carousel-inner {
+  height:100%;    
 }

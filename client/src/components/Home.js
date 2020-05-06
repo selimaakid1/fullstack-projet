@@ -4,7 +4,6 @@ import {connect} from 'react-redux'
 import { loadUser} from '../actions/AuthActions'
 import Carousel from './Carousel'
 
-
 class Home extends Component  {
     componentDidMount(){
         this.props.loadUser()
