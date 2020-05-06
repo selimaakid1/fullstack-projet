@@ -3,6 +3,10 @@ import { connect } from 'react-redux'
 import { login } from '../actions/AuthActions'
 import { setAlert, removeAlert } from '../actions/AlertActions'
 import { v4 as uuid } from "uuid";
+import { Link } from 'react-router-dom'
+
+
+
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -52,7 +56,11 @@ class Login extends Component {
         return (
             <div>
 
+               
+
+
                 <h1>Login</h1>
+
                 <div className='container'>
                     <form>
                         <input onChange={this.handleChange} name='Email' type='text' placeholder='Your email' />
@@ -64,7 +72,15 @@ class Login extends Component {
 
 
 
+
+
+               
+
+                
+                
+
             </div>
+
         )
     }
 }
