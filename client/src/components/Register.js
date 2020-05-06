@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { v4 as uuid } from "uuid";
-import { setAlert, removeAlert } from '../actions/AlertActions'
-import { register } from '../actions/AuthActions'
+import { setAlert, removeAlert, } from '../actions/AlertActions'
+import { register,clearError,  } from '../actions/AuthActions'
 
 
 
@@ -25,7 +25,7 @@ class Register extends Component {
     }
     registerNow = () => {
 
-        if (this.state.FirstName === '' || this.state.LastName === '', this.state.Email === '', this.state.PassWord === '') {
+        if (this.state.FirstName === '' || this.state.LastName === ''|| this.state.Email === ''|| this.state.PassWord === '') {
             let id = uuid()
             this.props.setAlert('All fields are required', 'warning', id)
             setTimeout(() => {
@@ -43,11 +43,16 @@ class Register extends Component {
         }
     }
     componentWillReceiveProps(nextProps) {
+        if (nextProps.auth.isAuthenticated){
+            this.props.history.push('/')
+
+        }
         if (nextProps.auth.error === 'User already exists!!') {
             let id = uuid()
             this.props.setAlert(nextProps.auth.error, 'warning', id)
             setTimeout(() => {
                 this.props.removeAlert()
+                this.props.clearError()
             }, 5000)
         }
 
@@ -90,5 +95,5 @@ const mapStateToProps = state => {
         auth: state.auth
     }
 }
-export default connect(mapStateToProps, { setAlert, removeAlert, register })(Register)
+export default connect(mapStateToProps, { setAlert, removeAlert, register , clearError, })(Register)
 
