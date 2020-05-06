@@ -59,7 +59,7 @@ class Register extends Component {
 
                 
 
-                <h1>Register</h1>
+                <h1 className='signup'>Inscription</h1>
                 <div className='container'>
                     <form>
                         <input name='FirstName' type='text' onChange={this.handleChange} placeholder='Your first name' />
@@ -70,8 +70,11 @@ class Register extends Component {
                         <input name='Adress' type='text' onChange={this.handleChange} placeholder='Your Adress' />
                     </form>
                 </div>
-                <button onClick={this.registerNow} className='btn btn-primary'>Register</button>
-
+                <div className='bottom'>
+                <button onClick={this.registerNow} className='btn btn-primary' className='btn-signup'>Inscription</button>
+                <br />
+                <h6>Vous avez un compte ? <Link to='/login'>Connectez-vous</Link> </h6>
+                </div>
             </div>
         )
     }
