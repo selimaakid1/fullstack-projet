@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { v4 as uuid } from "uuid";
 import { setAlert, removeAlert, } from '../actions/AlertActions'
-import { register,clearError,  } from '../actions/AuthActions'
+import { register, clearError, } from '../actions/AuthActions'
 
 
 
@@ -25,7 +25,7 @@ class Register extends Component {
     }
     registerNow = () => {
 
-        if (this.state.FirstName === '' || this.state.LastName === ''|| this.state.Email === ''|| this.state.PassWord === '') {
+        if (this.state.FirstName === '' || this.state.LastName === '' || this.state.Email === '' || this.state.PassWord === '') {
             let id = uuid()
             this.props.setAlert('All fields are required', 'warning', id)
             setTimeout(() => {
@@ -43,7 +43,7 @@ class Register extends Component {
         }
     }
     componentWillReceiveProps(nextProps) {
-        if (nextProps.auth.isAuthenticated){
+        if (nextProps.auth.isAuthenticated) {
             this.props.history.push('/')
 
         }
@@ -62,23 +62,24 @@ class Register extends Component {
         return (
             <div>
 
-                
+
 
                 <h1 className='signup'>Inscription</h1>
                 <div className='container'>
                     <form>
-                        <input name='FirstName' type='text' onChange={this.handleChange} placeholder='Your first name' />
-                        <input name='LastName' type='text' onChange={this.handleChange} placeholder='Your last name' />
-                        <input name='Email' type='text' onChange={this.handleChange} placeholder='Your email' />
-                        <input name='PassWord' type='text' onChange={this.handleChange} placeholder='Your password' />
-                        <input name='PhoneNumber' type='text' onChange={this.handleChange} placeholder='Your phone number' />
-                        <input name='Adress' type='text' onChange={this.handleChange} placeholder='Your Adress' />
+                        <input name='FirstName' type='text' onChange={this.handleChange} placeholder='Prénom' />
+                        <input name='LastName' type='text' onChange={this.handleChange} placeholder='Nom' />
+                        <input name='Email' type='text' onChange={this.handleChange} placeholder='Adresse e-mail' />
+                        <input name='PassWord' type='password' onChange={this.handleChange} placeholder='Mot de passe' />
+                        <input name='PhoneNumber' type='text' onChange={this.handleChange} placeholder='Telephone' />
+                        <input name='Adress' type='text' onChange={this.handleChange} placeholder='Adresse' />
                     </form>
                 </div>
                 <div className='bottom'>
-                <button onClick={this.registerNow} className='btn btn-primary' className='btn-signup'>Inscription</button>
-                <br />
-                <h6>Vous avez un compte ? <Link to='/login'>Connectez-vous</Link> </h6>
+                    <button onClick={this.registerNow} className='btn btn-primary' className='btn-signup'>Inscription</button>
+                    <div>
+                        <h6 className='sign-text'>Vous avez un compte ? <Link to='/login'>Connectez-vous</Link> </h6>
+                    </div>
                 </div>
             </div>
         )
@@ -98,5 +99,5 @@ const mapStateToProps = state => {
         auth: state.auth
     }
 }
-export default connect(mapStateToProps, { setAlert, removeAlert, register , clearError, })(Register)
+export default connect(mapStateToProps, { setAlert, removeAlert, register, clearError, })(Register)
 
