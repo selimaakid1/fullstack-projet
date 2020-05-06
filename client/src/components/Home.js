@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Carousel from './Carousel'
 
 const Home = () => {
     return (
         <div>
-            <h1>This is the homepage.</h1>
+            <Carousel />
         </div>
     )
 }

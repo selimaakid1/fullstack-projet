@@ -5,19 +5,19 @@ const Navbar = () => {
     return (
         <div className='navbar'>
             <h1>My Restaurant</h1>
-            <ul className='row d-flex w-25'>
-            <li className= 'col' id='links'>
-                    <Link to='/'>Home</Link>
-                </li>
-                <li className= 'col' id='links'>
-                    <Link to='/register'>Register</Link>
-                </li>
-                <li className= 'col' id='links' >
-                    <Link to='/login'>Login</Link>
-                </li>
+            <div className='row d-flex w-25'>
+            <div className= 'col' id='links'>
+                    <Link to='/'>Acceuil</Link>
+                </div>
+                <div className= 'col' id='links'>
+                    <Link to='/register'>Inscription</Link>
+                </div>
+                <div i className= 'col' id='links' >
+                    <Link to='/login'><i class="fas fa-sign-in-alt"></i></Link>
+                </div>
 
 
-            </ul>
+            </div>
         </div>
     )
 }

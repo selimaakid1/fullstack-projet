@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+
 
 class Login extends Component {
     constructor(props) {
@@ -16,6 +18,9 @@ class Login extends Component {
         return (
             <div>
 
+               
+
+
                 <h1>Login</h1>
                 <div className= 'container'>
                 <form>
@@ -25,17 +30,12 @@ class Login extends Component {
                 </div>
                 <button className= 'btn btn-primary'>Login</button> 
 
-                <h1>Connecter vous</h1>
-                <div className= 'container'>
-                <form>
-                    <input name= 'email' type='text' placeholder='Adresse e-mail' />
-                    <input name= 'password' type='text' placeholder='Mot de passe' />
-                </form>
-                </div>
-                <button className= 'btn btn-primary'>Connecter vous</button> 
+               
 
                 
+                
             </div>
+
         )
     }
 }

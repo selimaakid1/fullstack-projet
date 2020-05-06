@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { v4 as uuid } from "uuid";
 import { setAlert, removeAlert } from '../actions/AlertActions'
 import { register } from '../actions/AuthActions'
+
 
 
 class Register extends Component {
@@ -54,6 +56,9 @@ class Register extends Component {
     render() {
         return (
             <div>
+
+                
+
                 <h1>Register</h1>
                 <div className='container'>
                     <form>
@@ -66,6 +71,7 @@ class Register extends Component {
                     </form>
                 </div>
                 <button onClick={this.registerNow} className='btn btn-primary'>Register</button>
+
             </div>
         )
     }
