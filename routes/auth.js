@@ -12,14 +12,14 @@ const auth = require('../middleware/auth')
 // Private route
 router.get('/' ,auth ,(req,res) => {
    User.findById(req.user.id)
-   .then(user => res.json(user)
-   .catch(err => console.log(err.message)))
+   .then(user => res.json(user))
+   .catch(err => console.log(err.message))
 })
 
 
 router.post('/',[
-    check('email', 'Please include a valid email!').isEmail(),
-    check('password', 'Password is required!').not().isEmpty()
+    check('Email', 'Please include a valid email!').isEmail(),
+    check('PassWord', 'Password is required!').not().isEmpty()
 ]
  ,(req,res) =>{
     const errors = validationResult(req)
@@ -27,16 +27,16 @@ router.post('/',[
         return res.json({ errors: errors.array() })
 
     }
-    const { email, password } = req.body
+    const { Email, PassWord } = req.body
 
-    User.findOne({email})
+    User.findOne({Email})
         .then(user => {
             if(!user){
                 // Check if user exist
                 return res.json({msg: 'Please register before!'})
             }else {
                 // Compare password
-                bcrypt.compare(password, user.password, (err, isMatch) =>{
+                bcrypt.compare(PassWord, user.PassWord, (err, isMatch) =>{
                     if (err) {
                         console.log(err.message)
                     } else if(isMatch){
