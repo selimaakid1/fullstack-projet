@@ -17,19 +17,25 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <h1 className='signin'>Connecter vous</h1>
+
+               
+
+
+                <h1>Login</h1>
                 <div className= 'container'>
                 <form>
-                    <input name= 'email' type='text' placeholder='Adresse e-mail' />
-                    <input name= 'password' type='text' placeholder='Mot de passe' />
+                    <input name= 'email' type='text' placeholder='Your email' />
+                    <input name= 'password' type='text' placeholder='Your password' />
                 </form>
                 </div>
-                <div className='bottom'>
-                <button className= 'btn btn-primary' className= 'btn-signup'>Connecter vous</button> 
-                </div>
-                <h6 className='link-sign'>Vous n’avez pas de compte  ? <Link to='/register' >Inscrivez-vous</Link></h6>
+                <button className= 'btn btn-primary'>Login</button> 
 
-                </div>
+               
+
+                
+                
+            </div>
+
         )
     }
 }
