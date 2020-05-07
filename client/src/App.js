@@ -10,6 +10,7 @@ import setAuthToken from './utils/setAuthToken'
 import Alerts from './components/Alerts'
 import Contactus from './components/Contactus';
 import Menu from './components/Menu'
+import Reservation from './components/Reservation';
 
 if(localStorage.token){
   setAuthToken(localStorage.token)
@@ -30,6 +31,7 @@ function App() {
           <Route exact path="/register" component={Register} />
           <Route exact path="/contact" component={Contactus} />
           <Route exact path="/menu" component={Menu} />
+          <Route exact path="/reservation" component={Reservation} />
 
         </Switch>
       </div>

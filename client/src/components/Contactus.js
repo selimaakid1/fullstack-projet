@@ -12,8 +12,9 @@ class Contactus extends Component {
             <div className='contact-form'>
                 <h5 className='signin'>Contacter nous ici</h5>
 
-            
-                    <div >
+
+                <div >
+                    <form>
                         <label>Comment pouvons nous aider?</label>
                         <br />
                         <select id="help" name="helplist" form="helpform">
@@ -22,20 +23,12 @@ class Contactus extends Component {
                             <option value='wrong'>Mauvais produit</option>
                             <option value='advice'>Je voudrais vous conseiller</option>
                         </select>
-                    </div>
-                    <div>
                         <input type='text' name='email' placeholder='Nom' />
-                    </div>
-                    <div>
                         <input type='text' name='email' placeholder='Prénom' />
-                    </div>
-                    <div>
                         <input type='text' name='email' placeholder='Adresse e-mail' />
-                    </div>
-                    <div>
                         <input type='text' name='comment' placeholder='Commentaire' />
-                    </div>
-             
+                    </form>
+                </div>
                 <div className='bottom'>
                     <button className='btn-signup'>Envoyer</button>
                 </div>
