@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { login } from '../actions/AuthActions'
-import { setAlert, removeAlert } from '../actions/AlertActions'
+import { setAlert, removeAlert} from '../actions/AlertActions'
+import {clearError} from '../actions/AuthActions'
 import { v4 as uuid } from "uuid";
 import { Link } from 'react-router-dom'
 
@@ -25,6 +26,8 @@ class Login extends Component {
             this.props.history.push('/')
 
         }
+
+        if (nextProps.auth.error) {
         if (nextProps.auth.error === 'Please register before!' || nextProps.auth.error === 'Wrong Password!') {
             let id = uuid()
             this.props.setAlert(nextProps.auth.error, 'warning', id)
@@ -93,4 +96,4 @@ const mapStateToProps = state => {
         auth: state.auth
     }
 }
-export default connect(mapStateToProps, { login, setAlert, removeAlert })(Login)
+export default connect(mapStateToProps, { login, setAlert, removeAlert , clearError })(Login)
