@@ -15,7 +15,7 @@ router.post('/', [
 ], (req, res) => {
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
-        return res.json({ errors: errors.array() })
+        return res.status(400).json({ errors: errors.array() })
     }
     const { FirstName, LastName, Email, PassWord, Adress, PhoneNumber } = req.body
     User.findOne({ Email })
@@ -52,7 +52,7 @@ router.post('/', [
 
             }
         })
-        .catch(err=> console.log(err.message))
+        .catch(err=> res.status(400).json({msg : 'register failed'}))
 })
 
 module.exports = router 

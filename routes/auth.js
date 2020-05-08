@@ -13,7 +13,7 @@ const auth = require('../middleware/auth')
 router.get('/' ,auth ,(req,res) => {
    User.findById(req.user.id)
    .then(user => res.json(user))
-   .catch(err => console.log(err.message))
+   .catch(err =>res.json({msg :'Server error '}))
 })
 
 
@@ -33,7 +33,7 @@ router.post('/',[
         .then(user => {
             if(!user){
                 // Check if user exist
-                return res.json({msg: 'Please register before!'})
+                return res.status(400).json({msg: 'Please register before!'})
             }else {
                 // Compare password
                 bcrypt.compare(PassWord, user.PassWord, (err, isMatch) =>{
@@ -51,14 +51,14 @@ router.post('/',[
                             res.json({token})
                         })
                     } else {
-                        return res.json({msg: 'Wrong Password!'})
+                        return res.status(400).json({msg: 'Wrong Password!'})
                     }
                 })
                 }
             
         })
 
-        .catch(err => console.log(err.message))
+        .catch(err => res.json({msg : 'Server error'}))
 
     })
 

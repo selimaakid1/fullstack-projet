@@ -11,7 +11,7 @@ export const loadUser = () => dispatch => {
             type: USER_LOADED,
             payload: res.data
         }))
-        .catch(() => dispatch ({
+        .catch(() => dispatch({
             type: AUTH_ERROR,
 
         }))
@@ -53,13 +53,19 @@ export const login = formData => dispatch => {
             dispatch(loadUser())
         })
 
-        .catch(err => dispatch({
-            type: LOGIN_FAIL,
-            payload: err.response.data.msg
-        }))
+        .catch(err => {
+            dispatch({
+                type: LOGIN_FAIL,
+                payload: err.response.data.msg
+            })
+        })
 }
 // Logout User
-
+export const logout = ()=> dispatch=>{
+    dispatch({
+        type : LOGOUT
+    })
+}
 // Clear Errors
 export const clearError = () => dispatch => {
     dispatch({
