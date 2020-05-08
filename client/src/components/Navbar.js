@@ -48,6 +48,12 @@ const Navbar = (props) => {
                     <Link to='/'>Acceuil</Link>
                 </div>
                 <div className='col' id='links'>
+                    <Link to='/menu'>Menu</Link>
+                </div>
+                <div i className='col' id='links' >
+                    <Link to='/reservation'>Reservation</Link>
+                </div>
+                <div className='col' id='links'>
                     <Link to='/contact'>Contact</Link>
                 </div>
                 <div className='col' id='links'>

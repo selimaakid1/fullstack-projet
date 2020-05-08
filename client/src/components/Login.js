@@ -26,7 +26,9 @@ class Login extends Component {
             this.props.history.push('/')
 
         }
+
         if (nextProps.auth.error) {
+        if (nextProps.auth.error === 'Please register before!' || nextProps.auth.error === 'Wrong Password!') {
             let id = uuid()
             this.props.setAlert(nextProps.auth.error, 'warning', id)
             setTimeout(() => {
@@ -57,20 +59,23 @@ class Login extends Component {
         return (
             <div>
 
-               
 
 
-                <h1>Login</h1>
+
+                <h1 className='signup'>Connecter vous</h1>
 
                 <div className='container'>
                     <form>
-                        <input onChange={this.handleChange} name='Email' type='text' placeholder='Your email' />
-                        <input onChange={this.handleChange} name='PassWord' type='text' placeholder='Your password' />
+                        <input onChange={this.handleChange} name='Email' type='text' placeholder='Adresse e-mail' />
+                        <input onChange={this.handleChange} name='PassWord' type='password' placeholder='Mot de passe' />
                     </form>
                 </div>
-                <button onClick={this.loginNow} className='btn btn-primary'>Login</button>
-
-
+                <div className='bottom'>
+                    <button onClick={this.loginNow} className='btn btn-primary' className='btn-signup'>Connecter vous</button>
+                    <div>
+                    <h6 className='sign-text'>Vous n’avez pas de compte  ? <Link to='/register'>Inscrivez-vous</Link></h6>
+                </div>
+            </div>
 
 
 
@@ -80,15 +85,15 @@ class Login extends Component {
                 
                 
 
-            </div>
+            </div >
 
         )
     }
 }
 
-const mapStateToProps = state=>{
+const mapStateToProps = state => {
     return {
-        auth : state.auth
+        auth: state.auth
     }
 }
 export default connect(mapStateToProps, { login, setAlert, removeAlert , clearError })(Login)
