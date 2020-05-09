@@ -5,7 +5,7 @@ import { loadUser} from '../actions/AuthActions'
 import Carousel from './Carousel'
 
 class Home extends Component  {
-    componentDidMount(){
+    componentWillMount(){
         this.props.loadUser()
     }
     render (){
