@@ -6,12 +6,12 @@ import Home from './components/Home';
 import Login from './components/Login'
 import Register from './components/Register'
 import setAuthToken from './utils/setAuthToken'
-
 import Alerts from './components/Alerts'
 import Contactus from './components/Contactus';
 import Menu from './components/Menu'
 import PrivateRoute from './components/PrivateRoute'
 import ReservFrom from './components/ReservForm';
+
 
 
 if (localStorage.token) {
@@ -30,7 +30,6 @@ function App() {
           <Route exact path="/contact" component={Contactus} />
           <Route exact path="/menu" component={Menu} />
           <Route exact path="/reservation" component={ReservFrom} />
-
         </Switch>
       </div>
     </BrowserRouter>
