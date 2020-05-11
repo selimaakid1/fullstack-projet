@@ -7,7 +7,6 @@ import { v4 as uuid } from "uuid";
 import { Link } from 'react-router-dom'
 
 
-
 class Login extends Component {
     constructor(props) {
         super(props);
