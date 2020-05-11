@@ -8,7 +8,7 @@ const Navbar = (props) => {
 
         <div className='row d-flex'>
             <div className='col' id='links'>
-               { props.auth.user && props.auth.user.FirstName + ' ' + props.auth.user.LastName}
+               { props.auth.user ? props.auth.user.FirstName + ' ' + props.auth.user.LastName : ''}
             </div>
             <div className='col' id='links'>
                 <Link to='/'>Acceuil</Link>
@@ -29,6 +29,9 @@ const Navbar = (props) => {
     const guest = () => (
         <div className='row d-flex'>
             <div className='col' id='links'>
+                <Link to='/'>Acceuil</Link>
+            </div>
+            <div className='col' id='links'>
                 <Link to='/register'>Inscription</Link>
             </div>
             <div i className='col' id='links' >
@@ -46,6 +49,12 @@ const Navbar = (props) => {
             {/* <div className='row d-flex'>
                 <div className='col' id='links'>
                     <Link to='/'>Acceuil</Link>
+                </div>
+                <div className='col' id='links'>
+                    <Link to='/menu'>Menu</Link>
+                </div>
+                <div i className='col' id='links' >
+                    <Link to='/reservation'>Reservation</Link>
                 </div>
                 <div className='col' id='links'>
                     <Link to='/contact'>Contact</Link>
