@@ -68,9 +68,11 @@ class Login extends Component {
                 <div className='bottom'>
                     <button onClick={this.loginNow} className='btn btn-primary' className='btn-signup'>Connecter vous</button>
                     <div>
-                        <h6 className='sign-text'>Vous n’avez pas de compte  ? <Link to='/register'>Inscrivez-vous</Link></h6>
+
                     </div>
-                </div>
+                    </div>
+                    <h6 className='sign-text'>Vous n’avez pas de compte  ? <Link to='/register'>Inscrivez-vous</Link></h6>
+
             </div >
 
         )

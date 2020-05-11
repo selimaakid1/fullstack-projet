@@ -46,11 +46,9 @@ input {
 input {
   font-size: 15px;
   outline: none;
-  width: 30%;
-
   padding: 15px;
   margin: 5px;
-  width: 33%;
+
   border-radius: 6px;
   border:1px solid #ccc;
   font-family: "Karla", sans-serif;
@@ -90,8 +88,8 @@ font-size:15px;
 padding:10px 20px;
 text-decoration:none;
 text-shadow:0px 1px 0px #ffffff;
-  left: 50%;
-  margin: 20px;
+left: 50%;
+margin: 20px;
   
 }
 .btn-signup:hover {
@@ -160,4 +158,45 @@ select {
 }
 .carousel .carousel-inner {
   height:100%;    
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ddddda; color: white}
+.dropdown:hover .dropdown-content {display: block;}
+
+.reservation {
+  border: 1px solid #f3f1ed;
+  border-radius: 5px;
+  padding: 25px 50px;
+ 
+}
+
+.reservation-form input {
+  border-radius: 6px;
+  border:1px solid #ccc;
+  font-family: "Karla", sans-serif;
+  width: 100%;
+  
+}
+.reservation-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
