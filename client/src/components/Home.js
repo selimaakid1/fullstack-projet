@@ -3,33 +3,28 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { loadUser } from '../actions/AuthActions'
 import Carousel from './Carousel'
-// import ReservList from './ReservationList'
-// import ReservFrom from './ReservForm'
 import Reservation from './Reservation'
+import ReservationList from './ReservationList'
 
-class Home extends Component {
-    constructor(props) {
-        super(props);
-
-    }
-    componentWillMount() {
-        if (this.props.auth.user) { this.props.loadUser() }
+class Home extends Component  {
+    componentWillMount(){
+        if (this.props.auth.user) {this.props.loadUser()}
     }
     render() {
         return (
-            <div>
-                <Reservation/>
-                {/* <ReservFrom/>
-                <ReservList /> */}
-                <Carousel />
-            </div>
-        )
-    }
-
+            
+        <div>
+            <Carousel />
+            <Reservation />
+            <ReservationList />
+        </div>
+    )}
+    
 }
 const mapStateToProps = state => {
     return {
         auth: state.auth
     }
 }
-export default connect(mapStateToProps, { loadUser })(Home)
+
+export default connect(mapStateToProps, {loadUser}) (Home)

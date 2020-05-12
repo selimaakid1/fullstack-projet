@@ -9,9 +9,8 @@ import setAuthToken from './utils/setAuthToken'
 import Alerts from './components/Alerts'
 import Contactus from './components/Contactus';
 import Menu from './components/Menu'
-import PrivateRoute from './components/PrivateRoute'
-import ReservFrom from './components/ReservForm';
-
+import Reservation from './components/Reservation';
+import Footer from './components/Footer';
 
 
 if (localStorage.token) {
@@ -32,6 +31,7 @@ function App() {
           <Route exact path="/reservation" component={ReservFrom} />
         </Switch>
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }
