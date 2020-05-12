@@ -48,7 +48,7 @@ input {
   outline: none;
   padding: 15px;
   margin: 5px;
-
+  width: 30%;
   border-radius: 6px;
   border:1px solid #ccc;
   font-family: "Karla", sans-serif;
@@ -185,6 +185,7 @@ select {
   border: 1px solid #f3f1ed;
   border-radius: 5px;
   padding: 25px 50px;
+  position: relative;
  
 }
 
@@ -192,8 +193,9 @@ select {
   border-radius: 6px;
   border:1px solid #ccc;
   font-family: "Karla", sans-serif;
-  width: 100%;
-  
+  padding: 10px;
+  margin: 3px;
+  position: absolute;
 }
 .reservation-form {
   display: flex;
@@ -313,4 +315,8 @@ select {
   font-size: 13px;
   letter-spacing: 2px;
   text-align: center;
+}
+.reservation-item{
+  display: flex;
+  justify-content: center;
 }
