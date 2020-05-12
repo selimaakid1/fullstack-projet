@@ -6,3 +6,9 @@ export const addReservation = newReservation => {
         payload: newReservation
     }
 }
+export const deleteReserv = id => {
+    return {
+        type : DELETE_RESERVATION,
+        payload : id
+    }
+}

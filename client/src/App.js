@@ -11,6 +11,7 @@ import Alerts from './components/Alerts'
 import Contactus from './components/Contactus';
 import Menu from './components/Menu'
 import Reservation from './components/Reservation';
+import Footer from './components/Footer';
 
 if(localStorage.token){
   setAuthToken(localStorage.token)
@@ -35,6 +36,7 @@ function App() {
 
         </Switch>
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }
