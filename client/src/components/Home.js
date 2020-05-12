@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { loadUser } from '../actions/AuthActions'
 import Carousel from './Carousel'
-import ReservList from './ReservationList'
-import ReservFrom from './ReservForm'
+// import ReservList from './ReservationList'
+// import ReservFrom from './ReservForm'
+import Reservation from './Reservation'
 
 class Home extends Component {
     constructor(props) {
@@ -17,8 +18,9 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <ReservFrom/>
-                <ReservList />
+                <Reservation/>
+                {/* <ReservFrom/>
+                <ReservList /> */}
                 <Carousel />
             </div>
         )

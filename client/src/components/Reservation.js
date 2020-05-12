@@ -31,12 +31,9 @@ class Reservation extends Component {
                         <input type='time' name='Hour' placeholder='Heure' />
                         <i class="fa fa-clock-o" aria-hidden="true"></i>
                     </div>
-
                     <div class="col-md-4 col-sm-6">
                         <input type='email' name='Email' placeholder='Adresse e-mail' />
                         <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                        <input type='text' name='Number' placeholder='Combien de personnes?' />
-                        <i class="fa fa-user" aria-hidden="true"></i>
                         <input type='text' name='Number' placeholder='Combien de personnes?' />
                         <i class="fa fa-user" aria-hidden="true"></i>
                     </div>
