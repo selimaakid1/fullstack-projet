@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { addReservation } from '../actions/ReservationActions'
 import { v4 as uuid } from "uuid";
 
+
+
 class Reservation extends Component {
     constructor(props) {
         super(props);
@@ -18,15 +20,15 @@ class Reservation extends Component {
     handleChange = e => {
         this.setState({ [e.target.name]: e.target.value })
     }
-    componentWillReceiveProps (nextProps) {
-
+    componentWillReceiveProps(nextProps) {
+        this.setState(nextProps.save)
     }
     render() {
         return (
             <div className='reservation' >
-                <h5 className='signin'>Reserver une table</h5>
+                <h5 className='reservation-title'>Reserver une table</h5>
                 <div className='reservation-form' class='row'>
-                    <div class="col-md-4 col-sm-6">
+                    <div >
                         <input type='text' onChange={this.handleChange} name='Name' placeholder='Nom complet'  />
                         <i class="fa fa-pencil-square-o"></i>
                         <input type='date' onChange={this.handleChange} name='Date' placeholder='Date' />
@@ -49,19 +51,20 @@ class Reservation extends Component {
                         this.props.addNewReservation({...this.state, id: uuid()})
                     }}>Reserver</button>
                 </div>
+                
             </div>
         )
     }
 
 }
-// const mapStateToProps = state => {
-//     return{
-//         save: state.booking.saved
-//     }
-// }
+const mapStateToProps = state => {
+    return{
+        save: state.saved
+    }
+}
 const mapDispatchToProps = dispatch => {
     return {
         addNewReservation: reservation => dispatch(addReservation(reservation))
     }
 }
-export default connect (null, mapDispatchToProps) (Reservation)
+export default connect (mapStateToProps, mapDispatchToProps) (Reservation)
