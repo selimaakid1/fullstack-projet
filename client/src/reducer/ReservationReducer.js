@@ -3,17 +3,8 @@ import { v4 as uuid } from "uuid";
 
 
 const initialState = {
-    booking: [
-
-        {
-            id: uuid(),
-            Name: 'Selima',
-            Date: '10/8/2020',
-            Number: 3,
-            Placement: 'Dehors',
-            Hour: '20h : 30'
-        },
-        {
+    booking:[
+         {
             id: uuid(),
             Name: 'Selima',
             Date: '10/8/2020',
@@ -21,7 +12,6 @@ const initialState = {
             Placement: 'Dehors',
             Hour: '20h : 30'
         }
-
     ],
     saved: null
 }

@@ -17,12 +17,12 @@ class Contactus extends Component {
                     <form>
                         <label>Comment pouvons nous aider?</label>
                         <br />
-                        <select id="help" name="helplist" form="helpform">
+                        {/* <select id="help" name="helplist" form="helpform">
                             <option value='like'>J'ai pas aimer</option>
                             <option value='quality'>Produits de qualités</option>
                             <option value='wrong'>Mauvais produit</option>
                             <option value='advice'>Je voudrais vous conseiller</option>
-                        </select>
+                        </select> */}
                         <input type='text' name='email' placeholder='Nom' />
                         <input type='text' name='email' placeholder='Prénom' />
                         <input type='text' name='email' placeholder='Adresse e-mail' />
