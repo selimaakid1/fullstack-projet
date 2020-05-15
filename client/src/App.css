@@ -334,6 +334,8 @@ select {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
+  padding: 200px 0 150px;
+  
 }
 .reservation-header {
   background-image: url("https://matchthemes.com/demowp/caverta/wp-content/uploads/menu-img.jpg");
@@ -364,7 +366,7 @@ select {
   font-weight: 800;
 }
 .menu-header {
-  background-image: url("https://matchthemes.com/demowp/caverta/wp-content/uploads/blog7.jpg");
+  background-image: url("https://www.lameloise.fr/fichiers/plat-signature-lameloise-1.jpg");
   height: 500px;
   background-position: center;
   background-repeat: no-repeat;
@@ -394,4 +396,13 @@ select {
   font-family: "Karla", sans-serif; 
   font-size: 15px;
   line-height: 1.5em;
+}
+.header-image h1{
+  text-transform: uppercase;
+  font-size: 70px;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: "Karla", sans-serif;
 }
