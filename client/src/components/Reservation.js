@@ -28,6 +28,9 @@ class Reservation extends Component {
             <div className='reservation' >
                 <h5 className='reservation-title'>Reserver une table</h5>
                 <div className='reservation-form' class='row'>
+                    <div class="col-md-2 col-sm-3">
+                    </div>
+                 
                     <div >
                         <input type='text' onChange={this.handleChange} name='Name' placeholder='Nom complet'  />
                         <i class="fa fa-pencil-square-o"></i>
@@ -35,24 +38,24 @@ class Reservation extends Component {
                         <i class="fa fa-calendar-o" aria-hidden="true"></i>
                         <input type='time' onChange={this.handleChange} name='Hour' placeholder='Heure' />
                         <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-md-4 col-sm-6">                   
+                        <input type='text' onChange={this.handleChange} name='Number' placeholder='Combien de personnes?' />
                         <input type='email' onChange={this.handleChange} name='Email' placeholder='Adresse e-mail' />
-                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                        <input type='text'  onChange={this.handleChange} name='Number' placeholder='Combien de personnes?' />
-                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>                      
                         <input type='text' onChange={this.handleChange} name='Placement' placeholder='Où vous voulez vous asseoir?' />
                         <i class="fa fa-user" aria-hidden="true"></i>
                     </div>
 
 
                 </div>
-                <div className='bottom'>
+                <div className='bottom'>        
                     <button className='btn-signup' onClick = { e => {
                         e.preventDefault()
                         this.props.addNewReservation({...this.state, id: uuid()})
                     }}>Reserver</button>
                 </div>
-                
-            </div>
+        </div>
         )
     }
 
@@ -67,4 +70,6 @@ const mapDispatchToProps = dispatch => {
         addNewReservation: reservation => dispatch(addReservation(reservation))
     }
 }
+
 export default connect (mapStateToProps, mapDispatchToProps) (Reservation)
+
