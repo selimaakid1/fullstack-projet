@@ -25,7 +25,7 @@ class Login extends Component {
             this.props.history.push('/')
 
         }
-    
+
 
         if (nextProps.auth.error) {
             if (nextProps.auth.error === 'Please register before!' || nextProps.auth.error === 'Wrong Password!') {
@@ -60,29 +60,29 @@ class Login extends Component {
             <div>
                 <h1 className='signup'>Connecter vous</h1>
 
-                    <h1 className='signup'>Connecter vous</h1>
+                <h1 className='signup'>Connecter vous</h1>
 
-                    <div className='container'>
-                        <form>
-                            <input onChange={this.handleChange} name='Email' type='text' placeholder='Adresse e-mail' />
-                            <input onChange={this.handleChange} name='PassWord' type='password' placeholder='Mot de passe' />
-                        </form>
+                <div className='container'>
+                    <form>
+                        <input onChange={this.handleChange} name='Email' type='text' placeholder='Adresse e-mail' />
+                        <input onChange={this.handleChange} name='PassWord' type='password' placeholder='Mot de passe' />
+                    </form>
+                </div>
+                <div className='bottom'>
+                    <button onClick={this.loginNow} className='btn-signup'>Connecter vous</button>
+                    <div>
+
                     </div>
-                    <div className='bottom'>
-                        <button onClick={this.loginNow} className='btn-signup'>Connecter vous</button>
-                        <div>
+                </div>
+                <h6 className='sign-text'>Vous n’avez pas de compte  ? <Link to='/register'>Inscrivez-vous</Link></h6>
 
-                        </div>
-                    </div>
-                    <h6 className='sign-text'>Vous n’avez pas de compte  ? <Link to='/register'>Inscrivez-vous</Link></h6>
+            </div >
 
-                </div >
-
-            )
-        }
+        )
     }
-
 }
+
+
 const mapStateToProps = state => {
     return {
         auth: state.auth

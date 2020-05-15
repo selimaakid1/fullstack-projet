@@ -20,15 +20,15 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <Route exact path="/" component={Home} />
       <div className="container">
         <Alerts />
-        <Switch>
-          <Route exact path="/" component={Home} />
+        <Switch> 
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/contact" component={Contactus} />
           <Route exact path="/menu" component={Menu} />
-          <Route exact path="/reservation" component={ReservFrom} />
+          <Route exact path="/reservation" component={Reservation} />
         </Switch>
       </div>
       <Footer />

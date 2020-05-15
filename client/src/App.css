@@ -10,6 +10,8 @@
   align-items: center;
   z-index: 10;
   background-color: white;
+  position: fixed;
+  width: 100%;
 
 }
 .navbar a {
@@ -185,6 +187,9 @@ select {
   border: 1px solid #f3f1ed;
   border-radius: 5px;
   padding: 25px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
  
 }
 
@@ -314,3 +319,83 @@ select {
   letter-spacing: 2px;
   text-align: center;
 }
+.frontImg{
+    background: url('https://ad962edbae8ba7b03b7f-d10007df79b5b7a4e475a291e50a08cf.ssl.cf3.rackcdn.com/ouvrir-un-restaurant/ouvrir-un-restaurant.jpg') no-repeat center center ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    position: relative;
+
+   
+   
+  
+}
+.infoTitle h1{
+display: flex;
+justify-content: center;
+margin-top: 10%;
+  
+}
+.Info{
+  display: flex;
+flex-direction: column;
+align-items: center;
+}
+.inline{
+  display: flex;
+flex-direction: row-reverse;
+margin-top: 30px;
+height: 70vh;
+align-items: center;
+}
+.imgMod1 {
+  width: 70%;
+  margin-bottom: 10px;
+}
+.column{
+  display: flex;
+  flex-direction: column; 
+}
+.imgcoltwo{
+  width: 90%;
+}
+.columntwo{
+  margin-left: -30px;
+}
+.reservNow{
+  position: absolute;
+  bottom: 30%;
+  left: 40%;
+  width: 20%;
+  height: 5%;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 40x;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.features{
+  background: url('https://images.unsplash.com/photo-1560053608-13721e0d69e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60') no-repeat center center ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.card{
+  width: 18rem;
+}
+.featuresTitle{
+color: white;
+}
+
