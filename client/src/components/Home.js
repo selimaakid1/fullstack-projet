@@ -14,7 +14,6 @@ class Home extends Component {
     }
     render() {
         return (
-
             <div>
                 <Header/>
                 <RestoInfo/>
@@ -25,6 +24,8 @@ class Home extends Component {
             </div>
         )
     }
+    )}
+    
 
 }
 const mapStateToProps = state => {

@@ -1,21 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 
 .navbar {
-  color: rgb(8, 8, 8);
+  color: rgb(20, 20, 20);
   text-decoration: none;
   padding: 20px;
   border: 1px solid transparent;
-  position: relative;
+  width: 100%;
   display: flex;
   align-items: center;
   z-index: 10;
   background-color: white;
   position: fixed;
   width: 100%;
-
+  z-index: 50;
+  background-color: rgba(179, 177, 177, 0.3);
 }
 .navbar a {
-  color: rgb(12, 12, 12);
+  color: rgb(24, 23, 23);
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 2px;
@@ -23,7 +24,7 @@
 
 }
 .navbar a:hover{
-  color: #ddddda;
+  color: #464644;
   font-family: "Karla", sans-serif;
   text-transform: uppercase;
   font-size: 12px;
@@ -50,7 +51,7 @@ input {
   outline: none;
   padding: 15px;
   margin: 5px;
-
+  width: 30%;
   border-radius: 6px;
   border:1px solid #ccc;
   font-family: "Karla", sans-serif;
@@ -190,15 +191,17 @@ select {
   display: flex;
   flex-direction: column;
   align-items: center;
- 
+  position: relative;
+  margin: 33px; 
 }
 
 .reservation-form input {
   border-radius: 6px;
   border:1px solid #ccc;
   font-family: "Karla", sans-serif;
-  width: 100%;
-  
+  padding: 10px;
+  margin: 3px;
+  position: absolute;
 }
 .reservation-form {
   display: flex;
@@ -319,6 +322,7 @@ select {
   letter-spacing: 2px;
   text-align: center;
 }
+
 .frontImg{
     background: url('https://ad962edbae8ba7b03b7f-d10007df79b5b7a4e475a291e50a08cf.ssl.cf3.rackcdn.com/ouvrir-un-restaurant/ouvrir-un-restaurant.jpg') no-repeat center center ; 
     -webkit-background-size: cover;
@@ -397,5 +401,83 @@ align-items: center;
 }
 .featuresTitle{
 color: white;
+}
+
+
+.reservation-card{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header-image{
+  background-image: url("https://images.unsplash.com/photo-1570646982637-f6a903ca9e5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+.reservation-header {
+  background-image: url("https://matchthemes.com/demowp/caverta/wp-content/uploads/menu-img.jpg");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 200px 0 150px;
+  
+}
+
+.reservation-header h1 {
+  text-transform: uppercase;
+  font-size: 70px;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: "Karla", sans-serif;
+}
+.reservation-title {
+  font-family: "Karla", sans-serif; 
+  text-align: center;
+  padding: 20px;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.menu-header {
+  background-image: url("https://matchthemes.com/demowp/caverta/wp-content/uploads/blog7.jpg");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 200px 0 150px;
+  height: 100%;
+}
+.menu-header h1{
+  text-transform: uppercase;
+  font-size: 70px;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: "Karla", sans-serif;
+}
+.menu-title {
+  font-family: "Karla", sans-serif; 
+  text-align: center;
+  padding: 20px;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.menu-text{
+  font-family: "Karla", sans-serif; 
+  font-size: 15px;
+  line-height: 1.5em;
 }
 
