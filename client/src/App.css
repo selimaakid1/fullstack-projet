@@ -414,11 +414,16 @@ color: white;
 
 .header-image{
   background-image: url("https://images.unsplash.com/photo-1570646982637-f6a903ca9e5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80");
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+  height: 100vh;
+  width: 100%;
   margin: 0;
+  position: relative;
+  padding: 200px 0 150px;
+  
 }
 .reservation-header {
   background-image: url("https://matchthemes.com/demowp/caverta/wp-content/uploads/menu-img.jpg");
@@ -449,7 +454,7 @@ color: white;
   font-weight: 800;
 }
 .menu-header {
-  background-image: url("https://matchthemes.com/demowp/caverta/wp-content/uploads/blog7.jpg");
+  background-image: url("https://www.lameloise.fr/fichiers/plat-signature-lameloise-1.jpg");
   height: 500px;
   background-position: center;
   background-repeat: no-repeat;
@@ -467,11 +472,27 @@ color: white;
   letter-spacing: 2px;
   font-family: "Karla", sans-serif;
 }
+.small-title{
+  color: #9fc4ce;
+  margin: 16px;
+  letter-spacing: .15em;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+}
 .menu-title {
   font-family: "Karla", sans-serif; 
   text-align: center;
+  padding: 48px;
+  font-size: 48px;
+  text-transform: uppercase;
+  
+}
+.menu-section {
+  font-family: "Karla", sans-serif; 
+  text-align: left;
   padding: 20px;
-  font-size: 17px;
+  font-size: 30px;
   text-transform: uppercase;
   font-weight: 800;
 }
@@ -479,5 +500,28 @@ color: white;
   font-family: "Karla", sans-serif; 
   font-size: 15px;
   line-height: 1.5em;
+  letter-spacing: .03em;
+  text-align: center;
 }
-
+.menu-name {
+  font-family: "Karla", sans-serif; 
+  font-size: 17px;
+  line-height: 1.5em;
+  letter-spacing: .03em;
+  
+}
+.menu-description{
+  font-family: "Karla", sans-serif; 
+  font-size: 12px;
+  line-height: 1.5em;
+  letter-spacing: .03em;
+}
+.header-image h1{
+  text-transform: uppercase;
+  font-size: 70px;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: "Karla", sans-serif;
+}
