@@ -5,7 +5,9 @@ export const LOGIN_SUCCESS = "LOGIN_SUCCESS"
 export const LOGIN_FAIL = "LOGIN_FAIL"
 export const AUTH_ERROR = "AUTH_ERROR"
 export const CLEAR_ERROR = "CLEAR_ERROR"
-
+export const ADD_RESERV = 'ADD_RESERV'
+export const DELETE_RESERV = 'DELETE_RESERV'
+export const UPADTE_RESERV = 'UPADTE_RESERV'
 export const LOGOUT = "LOGOUT"
 
 

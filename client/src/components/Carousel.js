@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel'
 
 const Carousels = () => {
     return (
-        <div class="container-fluid px-0">
+        <div class="container-fluid px-0 carousel">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner bg-light" role="listbox">
                     <div class="carousel-item active">
