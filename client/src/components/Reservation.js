@@ -33,18 +33,12 @@ class Reservation extends Component {
                  
                     <div >
                         <input type='text' onChange={this.handleChange} name='Name' placeholder='Nom complet'  />
-                        <i class="fa fa-pencil-square-o"></i>
                         <input type='date' onChange={this.handleChange} name='Date' placeholder='Date' />
-                        <i class="fa fa-calendar-o" aria-hidden="true"></i>
-                        <input type='time' onChange={this.handleChange} name='Hour' placeholder='Heure' />
-                        <i class="fa fa-clock-o" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-md-4 col-sm-6">                   
+                        <input type='time' onChange={this.handleChange} name='Hour' placeholder='Heure' />       
                         <input type='text' onChange={this.handleChange} name='Number' placeholder='Combien de personnes?' />
-                        <input type='email' onChange={this.handleChange} name='Email' placeholder='Adresse e-mail' />
-                        <i class="fa fa-envelope-o" aria-hidden="true"></i>                      
+                        <input type='email' onChange={this.handleChange} name='Email' placeholder='Adresse e-mail' />                   
                         <input type='text' onChange={this.handleChange} name='Placement' placeholder='Où vous voulez vous asseoir?' />
-                        <i class="fa fa-user" aria-hidden="true"></i>
+               
                     </div>
 
 
