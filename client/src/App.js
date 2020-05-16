@@ -28,7 +28,6 @@ function App() {
           <Route exact path="/register" component={Register} />
           <Route exact path="/contact" component={Contactus} />
           <Route exact path="/menu" component={Menu} />
-          <Route exact path="/reservation" component={Reservation} />
           <Route exact path="/reservation" component={ReservationPage} />
         </Switch>
       </div>

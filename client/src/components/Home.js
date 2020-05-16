@@ -20,11 +20,11 @@ class Home extends Component {
                 <OurFeatures/>
                 {/* <Carousel /> */}
                 <Reservation />
-                <ReservationList />
+              
             </div>
         )
     }
-    )}
+
     
 
 }
