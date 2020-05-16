@@ -103,14 +103,14 @@ margin: 20px;
 
 a{ 
   text-decoration: none;
-  color: rgb(134, 93, 93);
+  color: rgb(104, 102, 102);
   font-family: "Karla", sans-serif;
 
 
 }
 a:hover {
   text-decoration: none;
-  color: white;
+  color: rgb(182, 180, 180);
 }
 
 .signin {
@@ -214,9 +214,7 @@ select {
   font-size:15px;
   line-height:24px;
   color:#737373;
-  display:block;
-  
-      
+  display: block;      
 
 }
 .footer hr {
@@ -341,7 +339,7 @@ select {
 .infoTitle h1{
 display: flex;
 justify-content: center;
-margin-top: 10%;
+
   
 }
 .Info{
@@ -352,7 +350,6 @@ align-items: center;
 .inline{
   display: flex;
 flex-direction: row-reverse;
-margin-top: 30px;
 height: 70vh;
 align-items: center;
 }
@@ -365,7 +362,7 @@ align-items: center;
   flex-direction: column; 
 }
 .imgcoltwo{
-  width: 90%;
+  width: 60%;
 }
 .columntwo{
   margin-left: -30px;
@@ -453,6 +450,7 @@ color: white;
   text-transform: uppercase;
   font-weight: 800;
 }
+
 .menu-header {
   background-image: url("https://www.lameloise.fr/fichiers/plat-signature-lameloise-1.jpg");
   height: 500px;
@@ -510,6 +508,9 @@ color: white;
   letter-spacing: .03em;
   
 }
+.menu-tab {
+  margin: 50px;
+}
 .menu-description{
   font-family: "Karla", sans-serif; 
   font-size: 12px;
@@ -524,4 +525,25 @@ color: white;
   text-align: center;
   letter-spacing: 2px;
   font-family: "Karla", sans-serif;
+}
+.resto-title{
+  font-family: "Karla", sans-serif; 
+  text-align: center;
+  padding: 20px;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+.resto-text{
+  font-family: "Karla", sans-serif; 
+  font-size: 20px;
+  line-height: 1.5em;
+  letter-spacing: .03em;
+  text-align: center;
+}
+.resto-text-1{
+  font-family: "Karla", sans-serif; 
+  font-size: 18px;
+  line-height: 1.5em;
+  letter-spacing: .03em;
+  text-align: left;
 }
