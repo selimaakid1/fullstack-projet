@@ -7,9 +7,9 @@ const Header = () => {
             <div className='header-image'>
                
             </div>
-            <div className='frontImg'>
+            {/* <div className='frontImg'>
                 <button type="button" class="btn btn-secondary reservNow">Make Your Reservation Now</button>
-            </div>
+            </div> */}
         </div>
     )
 }

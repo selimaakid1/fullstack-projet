@@ -3,17 +3,20 @@
 .navbar {
   color: rgb(20, 20, 20);
   text-decoration: none;
-  padding: 20px;
+  padding: 15px 20px;
   border: 1px solid transparent;
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   z-index: 10;
   background-color: white;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 50;
-  background-color: rgba(179, 177, 177, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .navbar a {
   color: rgb(24, 23, 23);
@@ -71,6 +74,7 @@ form {
   padding: 20px;
   font-size: 17px;
   font-family: "Karla", sans-serif;
+  margin-top: 64px;
 }
 .sign-text{
   text-align: center;
@@ -118,6 +122,7 @@ a:hover {
   padding: 20px;
   font-size: 17px;
   font-family: "Karla", sans-serif;
+  margin-top: 64px;
 
 }
 .bottom{
@@ -214,7 +219,8 @@ select {
   font-size:15px;
   line-height:24px;
   color:#737373;
-  display: block;      
+  display: block;
+  margin-bottom: 0;      
 
 }
 .footer hr {
@@ -350,12 +356,17 @@ align-items: center;
 .inline{
   display: flex;
 flex-direction: row-reverse;
-height: 70vh;
+height: 50vh;
 align-items: center;
 }
 .imgMod1 {
-  width: 70%;
-  margin-bottom: 10px;
+  width: 50%;
+ 
+}
+.imgMod1:hover{
+  transform: scale(1.1);
+  transition: .4s;
+  opacity: .9;
 }
 .column{
   display: flex;
@@ -380,7 +391,8 @@ align-items: center;
   text-align: center;
 }
 .features{
-  background: url('https://images.unsplash.com/photo-1560053608-13721e0d69e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60') no-repeat center center ; 
+  /* background: url('https://images.unsplash.com/photo-1560053608-13721e0d69e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60') no-repeat center center ;  */
+    background-image: url("https://i2.wp.com/files.123freevectors.com/wp-content/original/143764-beige-antique-background-image.jpg?w=800&q=95");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -393,11 +405,41 @@ align-items: center;
     justify-content: space-evenly;
     
 }
+.card-img-top{
+  border-radius: 15px;
+}
+.card-img-top:hover{
+  transform: scale(1.1);
+    transition: .4s;
+    opacity: .9;
+}
 .card{
   width: 18rem;
+  border-radius:15px ;
+}
+.card-title{
+  font-family: "Karla", sans-serif; 
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 200;
+ 
+}
+.card-text{
+  
+  font-size: 15px;
+  line-height: 1.5em;
+  letter-spacing: .03em;
+  text-align: center;
 }
 .featuresTitle{
-color: white;
+  color: white;
+  font-family: "Karla", sans-serif; 
+  text-align: center;
+  padding: 48px;
+  font-size: 48px;
+  text-transform: uppercase;
 }
 
 
@@ -419,17 +461,19 @@ color: white;
   width: 100%;
   margin: 0;
   position: relative;
-  padding: 200px 0 150px;
+  padding: 400px 0 200px;
   
 }
 .reservation-header {
-  background-image: url("https://matchthemes.com/demowp/caverta/wp-content/uploads/menu-img.jpg");
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url("https://www.lameloise.fr/fichiers/amuse-bouche-lameloise.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+  height: 100vh;
+  width: 100%;
   margin: 0;
-  padding: 200px 0 150px;
+  padding: 400px 0 200px;
   
 }
 
@@ -453,13 +497,15 @@ color: white;
 
 .menu-header {
   background-image: url("https://www.lameloise.fr/fichiers/plat-signature-lameloise-1.jpg");
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+  height: 100vh;
+  width: 100%;
   margin: 0;
-  padding: 200px 0 150px;
-  height: 100%;
+  padding: 400px 0 200px;
+  
 }
 .menu-header h1{
   text-transform: uppercase;
@@ -546,4 +592,25 @@ color: white;
   line-height: 1.5em;
   letter-spacing: .03em;
   text-align: left;
+}
+
+.contact-header{
+  background-image: url("https://www.lameloise.fr/fichiers/restaurant-lameloise-plat-1-1.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 400px 0 200px;
+}
+.contact-header h1{
+  text-transform: uppercase;
+  font-size: 70px;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: "Karla", sans-serif;
 }
