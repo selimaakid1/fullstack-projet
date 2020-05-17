@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const RestoInfo = () => {
     return (
@@ -15,7 +16,8 @@ const RestoInfo = () => {
                     <h4 className='resto-text-1'>Chez ..., il n'y a d'autres ambition que celle de proposer une cuisine sincère, ancrée dans les saisons, authentique mais moderne joyeux et genereuse.
                         Arrosée de bons vins nous la voulons au choix degustée, avalée, dévorée, engloutie dans une ambiance decontractée, simple et bon enfant.
                     </h4>
-                </div>
+                        <button className='menu-btn'><Link to='/menu'>Découvrir la Carte</Link> </button>
+                    </div>
                 <div className='col-md-4'>
                     <div className='column'>
                         <div className='row'>
@@ -24,12 +26,12 @@ const RestoInfo = () => {
                             </div>
                         </div>
                         <div className='row columntwo '>
-                            <div className='col-sm-6'>
+                            {/* <div className='col-sm-6'>
                                 <img className='imgcoltwo' src='https://i.pinimg.com/564x/f9/5e/96/f95e968d0c0a22cb78678c97b345a7fd.jpg' />
-                            </div>
-                            <div className='col-sm-6 '>
+                            </div> */}
+                            {/* <div className='col-sm-6 '>
                                 <img className='imgcoltwo' src='https://i.pinimg.com/564x/2e/bf/2d/2ebf2dc8b9f91c3ebb34c1e638671b85.jpg' />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
