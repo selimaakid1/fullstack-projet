@@ -1,15 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 const Header = () => {
     return (
         <div>
             <div className='header-image'>
-               
+            <button className='reserv-btn'><Link to='/reservation'>Reservé une table</Link></button>
+ 
             </div>
-            <div className='frontImg'>
-                <button type="button" class="btn btn-secondary reservNow">Make Your Reservation Now</button>
-            </div>
+            {/* <div className='frontImg'>
+            </div> */}
         </div>
     )
 }
