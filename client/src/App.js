@@ -13,6 +13,7 @@ import ReservationPage from './components/ReservationPage';
 import Footer from './components/Footer';
 
 
+
 if (localStorage.token) {
   setAuthToken(localStorage.token)
 }
