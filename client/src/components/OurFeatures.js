@@ -26,7 +26,7 @@ const OurFeatures = () => {
                             <img class="card-img-top" src="https://www.auberge-de-l-ill.com/media/cache/jadro_resize/rc/JCOO7VyC1553778664/jadroRoot/medias/59414c48ba312/auberge-de-l-ill-2017-preview-9-.jpg" height='200px' width='200px' alt="Card image cap" />
                             <div class="card-body">
                                 <h5 class="card-title">La Veranda</h5>
-                                <p class="card-text">Entièrement ouverte sur le jardin et sur l’Ill, la véranda se déploie dans une atmosphère lumineuse et d’une douceur délicate.
+                                <p class="card-text">Entièrement ouverte sur le jardin, la véranda se déploie dans une atmosphère lumineuse et d’une douceur délicate.
                                                         Tout est symbiose avec la Nature. </p>
 
                             </div>
