@@ -23,6 +23,8 @@ class Reservation extends Component {
     componentWillReceiveProps(nextProps) {
         this.setState(nextProps.save)
     }
+
+    
     render() {
         return (
             <div className='reservation' >
@@ -56,7 +58,7 @@ class Reservation extends Component {
 }
 const mapStateToProps = state => {
     return{
-        save: state.saved
+        save: state.reserv.saved
     }
 }
 const mapDispatchToProps = dispatch => {
