@@ -10,7 +10,7 @@ import OurFeatures from './OurFeatures'
 
 class Home extends Component {
     componentWillMount() {
-        if (this.props.auth.user) { this.props.loadUser() }
+        this.props.loadUser() 
     }
     render() {
         return (
