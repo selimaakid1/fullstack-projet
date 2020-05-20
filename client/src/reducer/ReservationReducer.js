@@ -1,4 +1,4 @@
-import { ADD_RESERVATION, DELETE_RESERVATION, EDIT_RESERVATION, SAVE_RESERVATION } from '../actions/types'
+import { ADD_RESERVATION, DELETE_RESERVATION, EDIT_RESERVATION, SAVE_RESERVATION, CLEAR_RESERVATION} from '../actions/types'
 import { v4 as uuid } from "uuid";
 
 
@@ -34,6 +34,16 @@ const ReservationReducer = (state = initialState, action) => {
                 ...state,
                 saved: action.payload
             }
+        case EDIT_RESERVATION:
+            return {
+                ...state,
+                booking: state.booking.map(el => el.id === action.payload.id ? action.payload : el)
+            }
+            case CLEAR_RESERVATION:
+                return {
+                    ...state,
+                    saved: null
+                }
         default:
             return state
     }

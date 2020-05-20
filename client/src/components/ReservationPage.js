@@ -3,9 +3,7 @@ import Reservation from './Reservation'
 import ReservationList from './ReservationList'
 
 class ReservationPage extends Component {
-    componentWillMount() {
-        { this.props.loadUser() }
-     }
+    
      render(){
 
      return (
