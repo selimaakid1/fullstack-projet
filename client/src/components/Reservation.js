@@ -23,6 +23,8 @@ class Reservation extends Component {
     componentWillReceiveProps(nextProps) {
         this.setState(nextProps.save)
     }
+
+    
     render() {
         return (
             <div className='reservation' >

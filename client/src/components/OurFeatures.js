@@ -27,6 +27,7 @@ const OurFeatures = () => {
                             <div class="card-body">
                                 <h5 class="card-title">La Veranda</h5>
                                 <p class="card-text">Entièrement ouverte sur le jardin, la véranda se déploie dans une atmosphère lumineuse et d’une douceur délicate.
+
                                                         Tout est symbiose avec la Nature. </p>
 
                             </div>
