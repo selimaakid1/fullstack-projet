@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 import MenuTab from './MenuTab'
 
-function Menu() {
+class Menu extends Component {
+    
+     render(){
     return (
         <div>
             <div className='menu-header'>
@@ -21,5 +23,5 @@ function Menu() {
 
     )
 }
-
+}
 export default Menu

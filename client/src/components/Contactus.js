@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { render } from 'react-dom';
 import { WrappedMap } from './Map'
 
-
 class Contactus extends Component {
     constructor(props) {
         super(props);
@@ -11,11 +10,14 @@ class Contactus extends Component {
 
     render() {
         return (
-            <div className='contact-form'>
-                <div className='contact-header'>
-                    <h1>Contact</h1>
-                </div>
 
+
+
+        <div className='contact-form'>
+            <div className='contact-header'>
+                <h1>Contact</h1>
+            </div>
+            
                 <h5 className='signin'>Contacter nous ici</h5>
                 <div >
                     <form>
@@ -36,6 +38,7 @@ class Contactus extends Component {
                 <div className='bottom'>
                     <button className='btn-signup'>Envoyer</button>
                 </div>
+
                 <WrappedMap
                     googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places`}
                     loadingElement={<div style={{ height: `100%` }} />}

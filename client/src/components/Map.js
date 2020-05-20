@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react'
 import { GoogleMap, Map, GoogleApiWrapper, withScriptjs, withGoogleMap, Marker } from "react-google-maps"
 
@@ -11,7 +12,6 @@ export const WrappedMap = withScriptjs(withGoogleMap((props) =>
         <Marker position={{ lat: 35.89239, lng: 10.59434 }} />}
     </GoogleMap>
 ))
-
 
 
 
