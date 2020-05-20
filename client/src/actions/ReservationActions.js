@@ -1,4 +1,4 @@
-import { ADD_RESERVATION, DELETE_RESERVATION, EDIT_RESERVATION, SAVE_RESERVATION} from './types'
+import { ADD_RESERVATION, DELETE_RESERVATION, EDIT_RESERVATION, SAVE_RESERVATION, CLEAR_RESERVATION} from './types'
 
 export const addReservation = newReservation => {
     return {
@@ -18,4 +18,15 @@ export const saveReserv = reservation => {
         type: SAVE_RESERVATION,
         payload: reservation
     }
+}
+export const editReserv = updated => {
+    return {
+        type: EDIT_RESERVATION,
+        payload: updated
+    }
+}
+export const clearReserv = () => {
+    return{
+    type: CLEAR_RESERVATION
+}
 }
