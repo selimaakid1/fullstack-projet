@@ -9,7 +9,7 @@ export const WrappedMap = withScriptjs(withGoogleMap((props) =>
         defaultCenter={{ lat: 35.829300, lng: 10.640630 }}
     >
         {/* {props.isMarkerShown &&  */}
-        <Marker position={{ lat: 35.89239, lng: 10.59434 }} />}
+        <Marker position={{ lat: 35.89239, lng: 10.59434 }} />
     </GoogleMap>
 ))
 

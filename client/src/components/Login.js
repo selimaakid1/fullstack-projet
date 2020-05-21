@@ -58,8 +58,6 @@ class Login extends Component {
     render() {
         return (
             <div>
-               
-
                 <h1 className='signup'>Connecter vous</h1>
 
                 <div className='container'>
@@ -75,7 +73,6 @@ class Login extends Component {
                     </div>
                 </div>
                 <h6 className='sign-text'>Vous n’avez pas de compte  ? <Link to='/register'>Inscrivez-vous</Link></h6>
-
             </div >
 
         )

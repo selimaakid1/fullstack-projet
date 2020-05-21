@@ -16,6 +16,7 @@
   left: 0;
   width: 100%;
   z-index: 50;
+  border-bottom: 1px solid rgb(24, 23, 23);
 
 }
 .navbar a {
@@ -81,6 +82,7 @@ form {
   padding: 20px;
   font-size: 12px;
   font-family: "Karla", sans-serif;
+  margin-bottom: 18%;
 }
 .btn-signup {
 text-align: center;
@@ -220,7 +222,8 @@ select {
   line-height:24px;
   color:#737373;
   display: block;
-  margin-bottom: 0;      
+  margin-bottom: 0;   
+ 
 
 }
 .footer hr {
@@ -317,6 +320,7 @@ select {
   text-transform: uppercase;
   font-size: 10px;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 .reservation-name {
@@ -405,6 +409,9 @@ align-items: center;
     justify-content: space-evenly;
     
 }
+.features h1{
+  color: rgb(120, 62, 23);
+}
 .card-img-top{
   border-radius: 15px;
 }
@@ -481,7 +488,7 @@ align-items: center;
   text-transform: uppercase;
   font-size: 70px;
   font-weight: 900;
-  color: white;
+  color: rgb(168, 92, 20);
   text-align: center;
   letter-spacing: 2px;
   font-family: "Karla", sans-serif;
@@ -505,24 +512,26 @@ align-items: center;
   width: 100%;
   margin: 0;
   padding: 400px 0 200px;
+ 
   
 }
 .menu-header h1{
   text-transform: uppercase;
   font-size: 70px;
   font-weight: 900;
-  color: white;
+  color:    rgb(235, 118, 0);
   text-align: center;
   letter-spacing: 2px;
   font-family: "Karla", sans-serif;
 }
 .small-title{
-  color: beige;
+  color: rgb(115, 113, 112);
   margin: 16px;
   letter-spacing: .15em;
   font-size: 16px;
   text-transform: uppercase;
   text-align: center;
+  margin-top: 45px;
 }
 .menu-title {
   font-family: "Karla", sans-serif; 
@@ -578,13 +587,17 @@ align-items: center;
   padding: 20px;
   font-size: 48px;
   text-transform: uppercase;
+  border-bottom: 1px solid rgb(115, 113, 112);
+  padding-bottom: 30px;
+  border-width: ;
 }
 .resto-text{
-  font-family: "Karla", sans-serif; 
+  font-family: cursive, sans-serif; 
   font-size: 20px;
   line-height: 1.5em;
   letter-spacing: .03em;
   text-align: center;
+  margin-top: 20px;
 }
 .resto-text-1{
   font-family: "Karla", sans-serif; 
@@ -649,4 +662,21 @@ margin: 20px;
   left: 40%;
   width: 20%;
  
+}
+.formulaire{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+}
+.map{
+  width: 80%;
+  margin-top: 8%;
+  
+}
+.contacts{
+  width: 100%;
+}
+.row {
+  margin-right: 0;  
 }
