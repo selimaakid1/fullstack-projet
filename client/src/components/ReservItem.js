@@ -20,6 +20,9 @@ const ReservItem = ({ reserv, remove, setCurrent }) => {
                     <Card.Text>
                         {reserv.Placement}
                     </Card.Text>
+                    <Card.Text>
+                        {reserv.Number}
+                    </Card.Text>
                     <button className='btn-signup' onClick={() => setCurrent(reserv)}>EDIT</button>
                     <button className='btn-signup' onClick={() => remove(reserv.id)}>DELETE</button>
                 </Card.Body>
