@@ -6,6 +6,7 @@ const Header = () => {
     return (
         <div>
             <div className='header-image'>
+                <h1>Manducare</h1>
             <button className='reserv-btn'><Link to='/reservation'>Reservé une table</Link></button>
  
             </div>
