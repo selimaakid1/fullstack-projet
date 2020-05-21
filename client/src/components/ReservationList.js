@@ -5,7 +5,7 @@ import ReservItem from './ReservItem'
 const  ReservationList = props => {
     return (
         <div className='reservation-card'>
-            {props.myReserv.booking .map(reserv => <ReservItem reserv= {reserv}/>)}
+            {props.myReserv.booking.map(reserv => <ReservItem reserv= {reserv}/>)}
         </div>
     )
 }

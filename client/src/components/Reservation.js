@@ -23,8 +23,8 @@ class Reservation extends Component {
     componentWillReceiveProps(nextProps) {
         this.setState(nextProps.save)
     }
-
     
+
     render() {
         return (
             <div className='reservation' >
@@ -32,40 +32,40 @@ class Reservation extends Component {
                 <div className='reservation-form' class='row'>
                     <div class="col-md-2 col-sm-3">
                     </div>
-                 
+
                     <div >
                         <input type='text' onChange={this.handleChange} name='Name' placeholder='Nom complet' value={this.state.Name} />
                         <input type='date' onChange={this.handleChange} name='Date' placeholder='Date' value={this.state.Date} />
-                        <input type='time' onChange={this.handleChange} name='Hour' placeholder='Heure' value={this.state.Hour}/>       
+                        <input type='time' onChange={this.handleChange} name='Hour' placeholder='Heure' value={this.state.Hour} />
                         <input type='text' onChange={this.handleChange} name='Number' placeholder='Combien de personnes?' value={this.state.Number} />
-                        <input type='email' onChange={this.handleChange} name='Email' placeholder='Adresse e-mail'value={this.state.Email} />                   
-                        <input type='text' onChange={this.handleChange} name='Placement' placeholder='Où vous voulez vous asseoir?'value={this.state.Placement} />
-               
+                        <input type='email' onChange={this.handleChange} name='Email' placeholder='Adresse e-mail' value={this.state.Email} />
+                        <input type='text' onChange={this.handleChange} name='Placement' placeholder='Où vous voulez vous asseoir?' value={this.state.Placement} />
+
                     </div>
 
 
                 </div>
-                <div className='bottom'>        
-                    <button className='btn-signup' onClick = { e => {
+                <div className='bottom'>
+                    <button className='btn-signup' onClick={e => {
                         e.preventDefault()
-                        if(this.props.save){
+                        if (this.props.save) {
                             this.props.updateReservation(this.state)
                             this.props.clear()
                         } else {
-                            this.props.addNewReservation({...this.state, id: uuid()})
+                            this.props.addNewReservation({ ...this.state, id: uuid() })
 
                         }
-                        this.setState({Name:'', Date:'', Hour:'', Number:'', Email:'', Placement:''})
+                        this.setState({ Name: '', Date: '', Hour: '', Number: '', Email: '', Placement: '' })
 
                     }}>{this.props.save ? 'Modifier votre reservation' : 'Reservé'}</button>
                 </div>
-        </div>
+            </div>
         )
     }
 
 }
 const mapStateToProps = state => {
-    return{
+    return {
         save: state.reserv.saved
     }
 }
@@ -73,9 +73,9 @@ const mapDispatchToProps = dispatch => {
     return {
         addNewReservation: reservation => dispatch(addReservation(reservation)),
         updateReservation: reservation => dispatch(editReserv(reservation)),
-        clear: ()=> dispatch(clearReserv())
+        clear: () => dispatch(clearReserv())
     }
 }
 
-export default connect (mapStateToProps, mapDispatchToProps) (Reservation)
+export default connect(mapStateToProps, mapDispatchToProps)(Reservation)
 

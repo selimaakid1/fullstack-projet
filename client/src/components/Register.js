@@ -76,7 +76,7 @@ class Register extends Component {
                     </form>
                 </div>
                 <div className='bottom'>
-                    <button onClick={this.registerNow} className='btn btn-primary' className='btn-signup'>Inscription</button>
+                    <button onClick={this.registerNow} className='btn-signup'>Inscription</button>
                     <div>
                     </div>
                 </div>
