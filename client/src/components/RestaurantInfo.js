@@ -5,6 +5,7 @@ const RestoInfo = () => {
     return (
 
         <div className='container ' >
+
             <h2 className='small-title'>-Welcome-</h2>
             <div className='infoTitle'>
                 <h1 className='resto-title'>Manducare</h1>
@@ -16,8 +17,8 @@ const RestoInfo = () => {
                     <h4 className='resto-text-1'>Chez Manducare, il n'y a d'autres ambition que celle de proposer une cuisine sincère, ancrée dans les saisons, authentique mais moderne joyeux et genereuse.
                         Arrosée de bons vins nous la voulons au choix degustée, avalée, dévorée, engloutie dans une ambiance decontractée, simple et bon enfant.
                     </h4>
-                        <button className='menu-btn'><Link to='/menu'>Découvrir la Carte</Link> </button>
-                    </div>
+                    <button className='menu-btn'><Link to='/menu'>Découvrir la Carte</Link> </button>
+                </div>
                 <div className='col-md-4'>
                     <div className='column'>
                         <div className='row'>
@@ -36,6 +37,7 @@ const RestoInfo = () => {
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }
