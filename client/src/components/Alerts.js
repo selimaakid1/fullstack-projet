@@ -4,7 +4,7 @@ import Alert from 'react-bootstrap/Alert'
 
 const Alerts = props => {
     return (
-        <div>
+        <div className='alerts'>
             {props.alert.length > 0 && props.alert.map(alert => (
             <Alert key={alert.id} variant={alert.type}>
                 {alert.msg}

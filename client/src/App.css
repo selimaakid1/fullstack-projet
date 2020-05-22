@@ -488,7 +488,7 @@ align-items: center;
   text-transform: uppercase;
   font-size: 70px;
   font-weight: 900;
-  color: rgb(168, 92, 20);
+  color: #b30008;
   text-align: center;
   letter-spacing: 2px;
   font-family: "Karla", sans-serif;
@@ -589,7 +589,7 @@ align-items: center;
   text-transform: uppercase;
   border-bottom: 1px solid rgb(115, 113, 112);
   padding-bottom: 30px;
-  border-width: ;
+
 }
 .resto-text{
   font-family: cursive, sans-serif; 
@@ -622,7 +622,7 @@ align-items: center;
   text-transform: uppercase;
   font-size: 70px;
   font-weight: 900;
-  color: white;
+  color: #310d0f;
   text-align: center;
   letter-spacing: 2px;
   font-family: "Karla", sans-serif;
@@ -679,4 +679,7 @@ margin: 20px;
 }
 .row {
   margin-right: 0;  
+}
+.alerts{
+  position: absolute;
 }
