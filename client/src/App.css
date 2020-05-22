@@ -19,7 +19,6 @@
 
 }
 
-
 .logo-name{
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 200;
@@ -87,8 +86,7 @@ form {
   padding: 20px;
   font-size: 12px;
   font-family: "Karla", sans-serif;
-   margin-bottom: 18%;
-
+  margin-bottom: 18%;
 }
 .btn-signup {
 text-align: center;
@@ -420,7 +418,7 @@ align-items: center;
     
 }
 .features h1{
-  color: rgb(120, 62, 23);
+  color: rgb(80, 48, 26);
 }
 .card-img-top{
   border-radius: 15px;
@@ -599,7 +597,6 @@ align-items: center;
   text-transform: uppercase;
   border-bottom: 1px solid rgb(115, 113, 112);
   padding-bottom: 30px;
-
 }
 .resto-text{
   font-family: cursive, sans-serif; 
@@ -681,9 +678,9 @@ margin: 20px;
   text-align: center;
   letter-spacing: 2px;
   font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 300;
+  font-weight: 900;
   color: #fff;
-
+}
 .formulaire{
   display: flex;
   width: 100%;
@@ -704,5 +701,6 @@ margin: 20px;
 }
 .alerts{
   position: absolute;
+
 
 }
