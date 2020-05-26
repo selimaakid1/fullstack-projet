@@ -8,7 +8,7 @@ const { check, validationResult } = require('express-validator');
 router.get('/', auth, (req, res) => {
     Reserv.find({
         user: req.user.id
-    }).then(reserv => res.json(reserv))
+    }).sort({date: -1}).then(reserv => res.json(reserv))
         .catch(err => console.log(err.message))
 
 })

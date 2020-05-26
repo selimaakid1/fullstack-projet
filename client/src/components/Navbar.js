@@ -2,8 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { logout } from '../actions/AuthActions'
+import { removeCurrentReserv } from '../actions/ReservationActions'
 const Navbar = (props) => {
 
+    const logMeOut = () => {
+        props.logout()
+        props.removeCurrentReserv()
+    }
     const userConnected = () => (
 
         <div className='navbar'>
@@ -31,7 +36,7 @@ const Navbar = (props) => {
                             {props.auth.user ? props.auth.user.FirstName + ' ' + props.auth.user.LastName : ''}
                         </div>
                         <div className='col'>
-                            <a href="#!" onClick={props.logout}>
+                            <a href="#!" onClick={logMeOut}>
                                 <i className="fas fa-sign-out-alt"></i>
                             Logout
                     </a>
@@ -102,4 +107,4 @@ const mapStateToProps = state => {
         auth: state.auth
     }
 }
-export default connect(mapStateToProps, { logout })(Navbar)
+export default connect(mapStateToProps, { logout, removeCurrentReserv })(Navbar)
