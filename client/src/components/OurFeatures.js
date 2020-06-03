@@ -8,8 +8,9 @@ const OurFeatures = () => {
                 <h1 className='featuresTitle'> Le Decor</h1>
             </div>
             <div className='container'>
-                <div className='row'>
-                    <div className='col-sm-4'>
+                
+                <div className='row featuresElements'>
+                    <div className='col-sm-5 col-md-4 col-lg-4'>
                         <div class="card" >
                             <img class="card-img-top" src="https://www.auberge-de-l-ill.com/media/cache/jadro_resize/rc/y8cI45e31553778663/jadroRoot/medias/593a8ebc60670/593a8f18370d8/bp-auberge-de-l-ill-rest.-004-2.jpg" height='200px' width='200px' alt="Card image cap" />
                             <div class="card-body">
@@ -19,7 +20,7 @@ const OurFeatures = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-sm-4'>
+                    <div className='col-sm-5 col-md-4 col-lg-4'>
                         <div class="card" >
                             <img class="card-img-top" src="https://www.auberge-de-l-ill.com/media/cache/jadro_resize/rc/JCOO7VyC1553778664/jadroRoot/medias/59414c48ba312/auberge-de-l-ill-2017-preview-9-.jpg" height='200px' width='200px' alt="Card image cap" />
                             <div class="card-body">
@@ -31,7 +32,7 @@ const OurFeatures = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-sm-4'>
+                    <div className='col-sm-5 col-md-4 col-lg-4'>
                         <div class="card" >
                             <img class="card-img-top" src="https://www.auberge-de-l-ill.com/media/cache/jadro_resize/rc/Nr3YXA3p1553778664/jadroRoot/medias/59414c48ba312/pm01025.jpg" height='200px' width='200px' alt="Card image cap" />
                             <div class="card-body">

@@ -1,26 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import {Button} from 'react-bootstrap'
 
 
 const Header = (props) => {
     return (
-        <div>
+        <div className='section-a'>
             <div className='header-image'>
-
-                {props.auth.user ? <button className='reserv-btn'><Link to='/reservation'>Reservé une table</Link></button> : <button className='reserv-btn'><Link to='/login'>Reservé une table</Link></button>
-                 
-
+                {props.auth.user ? <Button className='reserv-btn' variant="secondary"><Link to='/reservation'>Reservé une table</Link></Button>: <Button className='reserv-btn' variant="secondary"><Link to='/login'>Reservé une table</Link></Button>
                 }
-
-
-
-            
- 
-
-            </div>
-            {/* <div className='frontImg'>
+                {/* <div className='frontImg'>
             </div> */}
+            </div>
         </div>
     )
 }

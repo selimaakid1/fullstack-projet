@@ -11,6 +11,7 @@ import Contactus from './components/Contactus';
 import Menu from './components/Menu'
 import ReservationPage from './components/ReservationPage';
 import Footer from './components/Footer';
+import Dashboard from './components/dashborad';
 
 
 
@@ -30,6 +31,7 @@ function App() {
           <Route exact path="/contact" component={Contactus} />
           <Route exact path="/menu" component={Menu} />
           <Route exact path="/reservation" component={ReservationPage} />
+          <Route exact path="/admin" component={Dashboard} />
         </Switch>
       </div>
       <Footer />
