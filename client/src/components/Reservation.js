@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addReservation, editReserv, clearReserv } from '../actions/ReservationActions'
-import { v4 as uuid } from "uuid";
+
 
 
 
@@ -49,10 +49,10 @@ class Reservation extends Component {
                     <button className='btn-signup' onClick={e => {
                         e.preventDefault()
                         if (this.props.save) {
-                            this.props.updateReservation(this.state)
-                            this.props.clear()
+                            this.props.editReserv(this.state)
+                            this.props.clearReserv()
                         } else {
-                            this.props.addNewReservation({ ...this.state, id: uuid() })
+                            this.props.addReservation(this.state)
 
                         }
                         this.setState({ Name: '', Date: '', Hour: '', Number: '', Email: '', Placement: '' })
@@ -69,13 +69,7 @@ const mapStateToProps = state => {
         save: state.reserv.saved
     }
 }
-const mapDispatchToProps = dispatch => {
-    return {
-        addNewReservation: reservation => dispatch(addReservation(reservation)),
-        updateReservation: reservation => dispatch(editReserv(reservation)),
-        clear: () => dispatch(clearReserv())
-    }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Reservation)
+
+export default connect(mapStateToProps, { addReservation, editReserv, clearReserv})(Reservation)
 

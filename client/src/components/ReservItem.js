@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { deleteReserv, saveReserv } from '../actions/ReservationActions'
 import Card from 'react-bootstrap/Card'
 
-const ReservItem = ({ reserv, remove, setCurrent }) => {
+const ReservItem = ({ reserv, deleteReserv, saveReserv }) => {
     return (
         <div className='reservation-item' >
        
@@ -23,8 +23,8 @@ const ReservItem = ({ reserv, remove, setCurrent }) => {
                     <Card.Text>
                         {reserv.Number}
                     </Card.Text>
-                    <button className='btn-signup' onClick={() => setCurrent(reserv)}>EDIT</button>
-                    <button className='btn-signup' onClick={() => remove(reserv.id)}>DELETE</button>
+                    <button className='btn-signup' onClick={() => saveReserv(reserv)}>EDIT</button>
+                    <button className='btn-signup' onClick={() => deleteReserv(reserv._id)}>DELETE</button>
                 </Card.Body>
             </Card>
 
@@ -32,11 +32,6 @@ const ReservItem = ({ reserv, remove, setCurrent }) => {
     )
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        remove: id => dispatch(deleteReserv(id)),
-        setCurrent: reservation => dispatch(saveReserv(reservation))
- 
-    }
-}
-export default connect(null, mapDispatchToProps)(ReservItem)
+
+
+export default connect(null, {deleteReserv, saveReserv})(ReservItem)
