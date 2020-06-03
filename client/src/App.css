@@ -1,22 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+}
 
 .navbar {
   color: rgb(20, 20, 20);
   text-decoration: none;
   padding: 15px 20px;
   border: 1px solid transparent;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   z-index: 10;
   background-color: white;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
   z-index: 50;
   border-bottom: 1px solid rgb(24, 23, 23);
+  width: 100%;
+justify-content: center;
 
 }
 .navbar a {
@@ -354,17 +353,15 @@ justify-content: center;
 }
 .Info{
   display: flex;
-flex-direction: column;
 align-items: center;
 }
 .inline{
   display: flex;
-flex-direction: row-reverse;
-height: 50vh;
+flex-direction: column;
 align-items: center;
 }
 .imgMod1 {
-  width: 50%;
+  width: 80%;
  
 }
 .imgMod1:hover{
@@ -401,8 +398,6 @@ align-items: center;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 80vh;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -421,6 +416,7 @@ align-items: center;
     opacity: .9;
 }
 .card{
+  margin : 10px auto !important;
   width: 18rem;
   border-radius:15px ;
 }
@@ -457,18 +453,19 @@ align-items: center;
   width: 80%;
   margin: 0 auto;
 }
-
+.section-a{
+  height: 100vh;
+}
 .header-image{
   background-image: url("https://images.unsplash.com/photo-1570646982637-f6a903ca9e5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  opacity: 0.8;
   height: 100vh;
-  width: 100%;
-  margin: 0;
-  position: relative;
-  padding: 400px 0 200px;
+  
+  
   
 }
 .reservation-header {
@@ -602,9 +599,11 @@ align-items: center;
 .resto-text-1{
   font-family: "Karla", sans-serif; 
   font-size: 18px;
-  line-height: 1.5em;
+  line-height: 2.5em;
   letter-spacing: .03em;
   text-align: left;
+  margin: 10px 0px;
+  padding: 60px 0px;
 }
 
 .contact-header{
@@ -651,16 +650,16 @@ margin: 20px;
   padding: 12px 24px;
   letter-spacing: .15em;
   font-weight: 500;
-  display: inline-block;
   font-size: 18px;
-  left: 50%;
   margin: 20px;
   border-radius: 5px;
   text-align: center;
   position: absolute;
   bottom: 30%;
   left: 40%;
-  width: 20%;
+  min-width: 18%;
+  display: inline-block;
+  
  
 }
 .formulaire{
@@ -682,4 +681,14 @@ margin: 20px;
 }
 .alerts{
   position: absolute;
+}
+.dashboard-item{
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+.featuresElements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+margin-bottom: 55px;
 }
