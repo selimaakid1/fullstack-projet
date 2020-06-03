@@ -10,7 +10,6 @@ const Navbar = (props) => {
         props.removeCurrentReserv()
     }
     const userConnected = () => (
-
         <div className='navbar'>
             <div className='logo'>
                 <h1 className='logo-name'>Manducare</h1>
@@ -46,9 +45,8 @@ const Navbar = (props) => {
                     </div>
                 </div>
             </div>
+
         </div>
-
-
     )
 
     const guest = () => (
