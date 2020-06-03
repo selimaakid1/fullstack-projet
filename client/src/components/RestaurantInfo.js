@@ -9,7 +9,9 @@ const RestoInfo = () => {
                 <h2 className='col-md-12 small-title'>-Welcome-</h2>
             </div>
             <div className='infoTitle'>
-                <h1 className='resto-title'>Le restaurant Manducare</h1>
+
+                <h1 className='resto-title'>Manducare</h1>
+
                 <h4 className='resto-text'>L'art de vous acceuillir</h4>
             </div>
             <div className='inline '>

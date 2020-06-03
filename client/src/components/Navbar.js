@@ -5,7 +5,11 @@ import { logout } from '../actions/AuthActions'
 const Navbar = (props) => {
 
     const userConnected = () => (
-            <div className='row d-flex '>
+        <div className='navbar'>
+            <div className='logo'>
+                <h1 className='logo-name'>Manducare</h1>
+            </div>
+            <div className='row d-flex'>
                 <div className='col' id='links'>
                     <Link to='/'>Acceuil</Link>
                 </div>
@@ -36,12 +40,15 @@ const Navbar = (props) => {
                     </div>
                 </div>
             </div>
-       
 
+        </div>
     )
 
     const guest = () => (
-        
+        <div className='navbar'>
+            <div className='logo'>
+                <h1 className='logo-name'>Manducare</h1>
+            </div>
             <div className='row d-flex'>
                 <div className='col' id='links'>
                     <Link to='/'>Acceuil</Link>
@@ -53,7 +60,7 @@ const Navbar = (props) => {
                     <Link to='/login'>Login</Link>
                 </div>
             </div>
-        
+        </div >
     )
 
     return (
