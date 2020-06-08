@@ -61,28 +61,29 @@ class Register extends Component {
     render() {
         return (
             <div>
-
-
-
-                <h1 className='signup'>Inscription</h1>
                 <div className='container'>
-                    <form>
-                        <input name='FirstName' type='text' onChange={this.handleChange} placeholder='Prénom' />
-                        <input name='LastName' type='text' onChange={this.handleChange} placeholder='Nom' />
-                        <input name='Email' type='text' onChange={this.handleChange} placeholder='Adresse e-mail' />
-                        <input name='PassWord' type='password' onChange={this.handleChange} placeholder='Mot de passe' />
-                        <input name='PhoneNumber' type='text' onChange={this.handleChange} placeholder='Telephone' />
-                        <input name='Adress' type='text' onChange={this.handleChange} placeholder='Adresse' />
-                    </form>
-                </div>
-                <div className='bottom'>
-                    <button onClick={this.registerNow} className='btn-signup'>Inscription</button>
-                    <div>
+                    <div className='row'>
+                        <div className='col-md-12 col-sm-12 col-xs-12'>
+                            <form className='registerform'>
+                                <div>
+                                    <h1 className='signup'>Inscription</h1>
+                                </div>
+                                <input className='media' name='FirstName' type='text' onChange={this.handleChange} placeholder='Prénom' />
+                                <input className='media'  name='LastName' type='text' onChange={this.handleChange} placeholder='Nom' />
+                                <input className='media'  name='Email' type='text' onChange={this.handleChange} placeholder='Adresse e-mail' />
+                                <input className='media'  name='PassWord' type='password' onChange={this.handleChange} placeholder='Mot de passe' />
+                                <input className='media'  name='PhoneNumber' type='text' onChange={this.handleChange} placeholder='Telephone' />
+                                <input className='media'  name='Adress' type='text' onChange={this.handleChange} placeholder='Adresse' />
+                            </form>
+                        </div>
                     </div>
+                    <div className='bottom'>
+                        <button onClick={this.registerNow} className='btn-signup'>Inscription</button>
+                    </div>
+                    <h6 className='sign-text'>Vous avez un compte ? <Link to='/login'>Connectez-vous</Link> </h6>
                 </div>
-                <h6 className='sign-text'>Vous avez un compte ? <Link to='/login'>Connectez-vous</Link> </h6>
-
             </div>
+
         )
     }
 }
