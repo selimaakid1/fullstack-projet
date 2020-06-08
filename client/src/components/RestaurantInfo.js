@@ -42,6 +42,7 @@ const RestoInfo = () => {
 
             </div>
         </div>
+        </div>
     )
 }
 
