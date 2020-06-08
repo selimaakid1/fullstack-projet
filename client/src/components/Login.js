@@ -58,12 +58,15 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <h1 className='signup'>Connecter vous</h1>
+
 
                 <div className='container'>
-                    <form>
-                        <input onChange={this.handleChange} name='Email' type='text' placeholder='Adresse e-mail' />
-                        <input onChange={this.handleChange} name='PassWord' type='password' placeholder='Mot de passe' />
+                    <form >
+                        <div className='loginform'>
+                            <h1 className='signup'>Connecter vous</h1>
+                        </div>
+                        <input className='media' onChange={this.handleChange} name='Email' type='text' placeholder='Adresse e-mail' />
+                        <input className='media' onChange={this.handleChange} name='PassWord' type='password' placeholder='Mot de passe' />
                     </form>
                 </div>
                 <div className='bottom'>

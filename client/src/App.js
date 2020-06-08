@@ -23,7 +23,6 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Route exact path="/" component={Home} />
-      <div className="container">
         <Alerts />
         <Switch>
           <Route exact path="/login" component={Login} />
@@ -33,7 +32,6 @@ function App() {
           <Route exact path="/reservation" component={ReservationPage} />
           <Route exact path="/admin" component={Dashboard} />
         </Switch>
-      </div>
       <Footer />
     </BrowserRouter>
   );
