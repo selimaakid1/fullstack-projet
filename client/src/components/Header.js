@@ -10,8 +10,6 @@ const Header = (props) => {
             <div className='header-image'>
                 {props.auth.user ? <Button className='reserv-btn' variant="secondary"><Link to='/reservation'>Reservé une table</Link></Button>: <Button className='reserv-btn' variant="secondary"><Link to='/login'>Reservé une table</Link></Button>
                 }
-                {/* <div className='frontImg'>
-            </div> */}
             </div>
         </div>
     )

@@ -9,23 +9,24 @@ import OurFeatures from './OurFeatures'
 
 class Home extends Component {
     componentWillMount() {
-        if (this.props.auth.token){this.props.loadUser() }
+        if (this.props.auth.token) { this.props.loadUser() }
 
     }
     render() {
         return (
             <div>
-                <Header/>
-                <RestoInfo/>
-                <OurFeatures/>
+                <Header />
+                <RestoInfo />
+                <OurFeatures />
                 {/* <Carousel /> */}
-                <Reservation />
-              
+                {this.props.auth.token ? <Reservation /> : null}
+
+
             </div>
         )
     }
 
-    
+
 
 }
 const mapStateToProps = state => {
